@@ -1,0 +1,11 @@
+{
+  "name": "juggle",
+  "version": "1.0.0",
+  "description": "基于 vue 的页面渲染工具。使用json渲染整个页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
