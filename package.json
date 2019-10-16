@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "xiaoqiang",
   "private": true,
-  "description": "基于 vue 的页面渲染工具。使用json渲染整个页面 ",
+  "description": "基于 vue 的页面渲染工具。使用json渲染整个页面",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
