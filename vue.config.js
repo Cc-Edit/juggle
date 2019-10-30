@@ -9,7 +9,8 @@ const mockPath = "http://rap.d.renrenauto.com/";
 
 //资源打包后的引用地址
 const publicPath = process.env.NODE_ENV === 'production'
-  ? 'https://s.domain.com/'
+  ? '/'
+  // ? 'https://s.domain.com/'
   : '/';
 
 //请求转发配置
