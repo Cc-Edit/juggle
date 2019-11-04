@@ -33,5 +33,12 @@
 页面模板文件为一个json文件，位于 public/pageConfig 目录下，以 config 开头的js文件。
 通过script标签异步引入，配置参数挂载到 window.__pageConfig__ 中，再通过Vue实例向下传递。
 
+页面由不同的组件搭建而成，按照组件用途分为以下三类：
+1. collection  容器级别组件，例如：下拉列表容器，展开收起容器，tab切换容器，侧边栏容器等
+2. block  块级别组件，用来展示数据的最小单元，例如：多行内容块，左右两列内容块， flex等分内容块等
+3. public  公共组件，例如：全局的提示窗，全局的页头页尾，全局的loading等
+以上组件分类位于/src/components目录下。
+
+
 
 
