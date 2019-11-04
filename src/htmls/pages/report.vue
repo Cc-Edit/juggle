@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/about/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <transition :name="transitionName">
-      <router-view/>
-    </transition>
+    123
   </div>
 </template>
 <script>

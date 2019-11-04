@@ -3,10 +3,26 @@ import App from '../pages/report.vue'
 import '../pwa/reportServiceWorker'
 import store from '../store/report.js'
 require("@/assets/js/common");
-
 Vue.config.productionTip = false;
+const { $getJsFile, $urlParse, $isDev } = Vue.prototype;
+const pageCode = $urlParse().pageCode || '0000'; //页面编码
 
-new Vue({
-  store,
-  render: h => h(App)
-}).$mount('#app');
+//页面配置文件地址
+let configUrl = ($isDev ? `/static/pageConfig/config-${pageCode}.js` : `https://s.che360.com/febuild/m-embed/static/pageConfig/config-${pageCode}-PAGECONFIGVERSION.js`);
+
+$getJsFile(`${configUrl}`,() => {
+  let pageData =  window.__embedconfig__;
+  new Vue({
+    store,
+    propsData: pageData,
+    components: { App },
+    // router: router(Vue),
+  }).$mount("#app");
+},() =>{
+  new Vue({
+    store,
+    propsData: { emptyPage: true, BodyConfig: {}, pageConfig: {} },
+    components: { App },
+    // router: router(Vue),
+  }).$mount("#app");
+});
