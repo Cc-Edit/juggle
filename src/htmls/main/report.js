@@ -8,7 +8,7 @@ const { $getJsFile, $urlParse, $isDev } = Vue.prototype;
 const pageCode = $urlParse().pageCode || '0000'; //页面编码
 
 //页面配置文件地址
-let configUrl = ($isDev ? `/static/pageConfig/config-${pageCode}.js` : `https://s.che360.com/febuild/m-embed/static/pageConfig/config-${pageCode}-PAGECONFIGVERSION.js`);
+let configUrl = ($isDev ? `/pageConfig/config-${pageCode}.js` : `/pageConfig/config-${pageCode}.js`);
 
 $getJsFile(`${configUrl}`,() => {
   let pageData =  window.__embedconfig__;
