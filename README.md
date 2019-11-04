@@ -31,5 +31,7 @@
 
    页面模板的载体是 report.html 页面
 页面模板文件为一个json文件，位于 public/pageConfig 目录下，以 config 开头的js文件。
+通过script标签异步引入，配置参数挂载到 window.__pageConfig__ 中，再通过Vue实例向下传递。
+
 
 

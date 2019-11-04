@@ -11,7 +11,7 @@ const pageCode = $urlParse().pageCode || '0000'; //页面编码
 let configUrl = ($isDev ? `/pageConfig/config-${pageCode}.js` : `/pageConfig/config-${pageCode}.js`);
 
 $getJsFile(`${configUrl}`,() => {
-  let pageData =  window.__embedconfig__;
+  let pageData =  window.__pageConfig__;
   new Vue({
     store,
     propsData: pageData,

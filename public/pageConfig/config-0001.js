@@ -1,4 +1,4 @@
-var __embedconfig__ = {
+var __pageConfig__ = {
   "pageName": "111",
   "author": "文强",
   "PM": "文强",
