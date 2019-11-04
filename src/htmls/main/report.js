@@ -16,13 +16,13 @@ $getJsFile(`${configUrl}`,() => {
     store,
     propsData: pageData,
     components: { App },
-    // router: router(Vue),
+    render: h => h(App),
   }).$mount("#app");
 },() =>{
   new Vue({
     store,
     propsData: { emptyPage: true, BodyConfig: {}, pageConfig: {} },
     components: { App },
-    // router: router(Vue),
+    render: h => h(App),
   }).$mount("#app");
 });
