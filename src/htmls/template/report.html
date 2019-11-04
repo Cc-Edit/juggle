@@ -31,13 +31,28 @@
     <!-- windows phone 点击无高光 -->
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue-cli-subPage</title>
+    <title></title>
+    <style>
+      body,p{margin: 0;padding: 0;line-height: 1;}
+      #kx-mask{z-index: 9527;display: -webkit-box; display: -webkit-flex;display: flex;-webkit-box-align: center;-webkit-align-items: center;align-items: center;-webkit-box-align: center;-moz-box-align: center;-ms-flex-pack:center;justify-content: center;overflow: hidden;opacity: 1;position: fixed;width: 100%;height: 100%;background-color: #fff;transition: opacity .3s;}
+      #kx-loading{position:relative;width:120px}
+      #kx-loading>p{text-align: center;margin-top: 8px;color: #666;font-size: 14px;}
+      #kx-loading>img{padding:0;margin: 0;border: none;display: block;margin: 0 auto;width: 7vw;transform: rotateZ(0deg);animation:kx-frame .8s infinite linear}
+      @keyframes kx-frame{0%{transform: rotateZ(0deg)}100%{transform: rotateZ(360deg)}}@-webkit-keyframes kx-frame{0%{transform: rotateZ(0deg)}100%{transform: rotateZ(360deg)}}
+    </style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but vue-cli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div id="kx-mask">
+        <div id="kx-loading">
+          <img src="data:image/png;base64,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" alt="" srcset="">
+          <p>&nbsp;&nbsp;加载中...</p>
+        </div>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
