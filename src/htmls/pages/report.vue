@@ -11,7 +11,7 @@
   </div>
 </template>
 <script >
-  'use strict'
+  'use strict';
   export default {
     name: 'App',
     data() {
@@ -27,15 +27,6 @@
       };
       pageData = Object.assign(pageData, baseConfig, pageConfig);
       return pageData
-    },
-    //使用watch 监听$router的变化
-    //如果to索引大于from索引,判断为前进状态,反之则为后退状态
-    watch: {
-      $route(to, from) {
-        const toDepth = to.path.split('/').length;
-        const fromDepth = from.path.split('/').length;
-        this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-      }
     }
   }
 </script>

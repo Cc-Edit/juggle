@@ -39,6 +39,18 @@
 3. public  公共组件，例如：全局的提示窗，全局的页头页尾，全局的loading等
 以上组件分类位于/src/components目录下。
 
-
+### 选型
+   首相项目应该支持各种基于vue的前端ui组件库，例如：
+   PC端：
+   Element（https://github.com/ElemeFE/element）
+   iview（https://github.com/iview/iview）
+   muse-ui（https://github.com/museui/muse-ui）
+   ant-design-vue（https://github.com/vueComponent/ant-design-vue）
+   移动端：
+   mint-ui（https://github.com/ElemeFE/mint-ui）
+   vant（https://github.com/youzan/vant）
+   cube-ui（https://github.com/didi/cube-ui）
+因为vux对vue-cli2.0以上版本不支持，所以不再支持的组件库中。
+此项目使用有赞团队的 vant 作为基础组件库，vant在组件数量，对新版本vue/cli的支持程度，以及更新维护的频率都优于其他框架。
 
 
