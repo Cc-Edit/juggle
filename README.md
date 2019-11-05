@@ -8,7 +8,7 @@
     页面配置服务用来拖拽生成页面配置json文件，目前还在实现中，初期直接使用本地配置文件。
     report.html模板渲染页面已经实现并已在线上进行验证
     
-### 项目地址：http://juggle.isjs.cn/report.html
+### 项目地址：http://juggle.isjs.cn/report.html?pageCode=0001
 
 ### 配置项文档：https://github.com/adminV/juggle/blob/master/OPTIONS.md
 
