@@ -2,7 +2,7 @@ var __pageConfig__ = {
   "pageName": "测试页面",
   "author": "文强",
   "PM": "文强",
-  "createData": "20190809",
+  "createData": "20191109",
   "baseConfig": {
     "emptyShopId": true,
     "query": {},
