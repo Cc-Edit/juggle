@@ -44,12 +44,14 @@
 ### 选型
 首相项目应该支持各种基于vue的前端ui组件库，例如：
 PC端：
+
     Element（https://github.com/ElemeFE/element）
     iview（https://github.com/iview/iview）
     muse-ui（https://github.com/museui/muse-ui）
     ant-design-vue（https://github.com/vueComponent/ant-design-vue）
     
 移动端：
+
     mint-ui（https://github.com/ElemeFE/mint-ui）
     vant（https://github.com/youzan/vant）
     cube-ui（https://github.com/didi/cube-ui）
