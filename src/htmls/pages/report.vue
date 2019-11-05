@@ -14,8 +14,13 @@
 <script >
   'use strict';
   import { Button } from 'vant';
+
+  const components = {
+    [Button.name]: Button
+  };
+
   export default {
-    components: { [Button.name]:Button },
+    components: components,
     name: 'App',
     data() {
       let {baseConfig = {}, pageConfig = {}, emptyPage = false} = this.$root.$options.propsData;
