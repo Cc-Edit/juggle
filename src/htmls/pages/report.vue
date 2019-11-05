@@ -8,11 +8,14 @@
       <img src="../../assets/images/noauth.png" alt="">
       <p>{{emptyText}}</p>
     </div>
+    <van-button type="default"> 默认按钮</van-button>
   </div>
 </template>
 <script >
   'use strict';
+  import { Button } from 'vant';
   export default {
+    components: { [Button.name]:Button },
     name: 'App',
     data() {
       let {baseConfig = {}, pageConfig = {}, emptyPage = false} = this.$root.$options.propsData;
