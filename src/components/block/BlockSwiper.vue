@@ -72,11 +72,13 @@
 <style lang="less">
   .bl-sw-body{
     .van-swipe-item{
-      line-height: 150px;
       color: #fff;
       font-size: 20px;
       text-align: center;
-      background-color: #66c6f2;
+      >img{
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 </style>

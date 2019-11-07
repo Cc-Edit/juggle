@@ -24,7 +24,7 @@ var __pageConfig__ = {
       {
         "templateId": "BlockSwiper",
         "prop": {
-          "autoplay": 1000,
+          "autoplay": 3000,
           "duration": 2000,
           "initial-swipe": 1,
           "loop": true,
