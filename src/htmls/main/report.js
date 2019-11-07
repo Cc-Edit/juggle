@@ -11,7 +11,7 @@ const pageCode = $urlParse().pageCode || '0000'; //页面编码
 let configUrl = ($isDev ? `/pageConfig/config-${pageCode}.js` : `/pageConfig/config-${pageCode}.js`);
 
 $getJsFile(`${configUrl}`,() => {
-  let pageData =  window.__pageConfig__;
+  let pageData =  window.__pageConfig__ || { emptyPage: true, pageConfig: {} };
   new Vue({
     store,
     propsData: pageData,
@@ -21,7 +21,7 @@ $getJsFile(`${configUrl}`,() => {
 },() =>{
   new Vue({
     store,
-    propsData: { emptyPage: true, BodyConfig: {}, pageConfig: {} },
+    propsData: { emptyPage: true, pageConfig: {} },
     components: { App },
     render: h => h(App),
   }).$mount("#app");
