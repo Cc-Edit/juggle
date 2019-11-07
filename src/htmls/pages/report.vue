@@ -47,7 +47,7 @@
     color: #666;
     text-align: center;
     line-height: 2rem;
-    height: 12rem;
+    height: 375px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
