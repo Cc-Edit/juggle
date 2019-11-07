@@ -1,10 +1,13 @@
 <template>
   <div class="bl-sw-body">
-    <van-swipe :autoplay="3000" indicator-color="white">
-      <van-swipe-item>1</van-swipe-item>
-      <van-swipe-item>2</van-swipe-item>
-      <van-swipe-item>3</van-swipe-item>
-      <van-swipe-item>4</van-swipe-item>
+    <van-swipe :autoplay="autoplay"
+               :duration="duration"
+               :initial-swipe="initialSwipe"
+               :loop="loop"
+               indicator-color="white">
+      <van-swipe-item v-for="(image, index) in bannerData" :key="index">
+        <img v-lazy="image" >
+      </van-swipe-item>
     </van-swipe>
   </div>
 </template>
@@ -13,7 +16,7 @@
 
   const components = {
     [Swipe.name]: Swipe,
-    [SwipeItem.name]: SwipeItem,
+    [SwipeItem.name]: SwipeItem
   };
 
   export default {
@@ -32,12 +35,31 @@
       },
       baseData: {
         default: () => {
-          return [];
+          return {};
         }
       }
     },
-    data() {},
-    computed: {},
+    data() {
+      let {
+        autoplay = 1000,
+        duration = 500,
+        initialSwipe = 0,
+        loop = true,
+        dataKeyChain = ""
+      } = this.prop;
+      return {
+        autoplay: autoplay,
+        duration: duration,
+        initialSwipe: initialSwipe,
+        loop: loop,
+        dataKeyChain: dataKeyChain
+      };
+    },
+    computed: {
+      bannerData(){
+        return this.$getChainData(this.baseData, this.dataKeyChain);
+      }
+    },
     watch: {},
     created() {},
     mounted() {},

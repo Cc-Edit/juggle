@@ -12,6 +12,7 @@
       <div v-for="(item, ind) in bodyConfig" :key="ind">
         <component :is="item.templateId"
                    :prop="item.prop"
+                   :baseData="baseData"
                    :childItem="item.childItem"></component>
       </div>
     </div>
@@ -33,7 +34,6 @@
     data() {
       let {pageConfig = {}, emptyPage = false, bodyStyle = {}} = this.$root.$options.propsData;
       let pageData = {
-        baseList: [],  //页面数据列表
         emptyText: "页面配置异常",  //列表为空时的提示文案
         emptyPage: emptyPage,  //是否展示异常页面
         bodyStyle: bodyStyle,  //是否展示异常页面
@@ -41,16 +41,47 @@
         isDrawer: false,  //侧边栏状态
         query: {},    //查询条件
         DrawerConfig: {},    //查询条件
+        baseData: {},    //页面数据
       };
       pageData = Object.assign(pageData, pageConfig);
       return pageData
     },
     computed: {},
     watch: {},
-    created() {},
+    created() {
+      this.getNewList()
+    },
     mounted() {},
     destroyed() {},
-    methods: {}
+    methods: {
+      /**
+       * 获取报表数据
+       * */
+      getNewList(_query = {}){
+        let {query, origin} = this.dataSource;
+        if(this.$isNullOrEmpty(origin)){
+          return;
+        }
+
+        let {originUrl, originMethod, dataKeyChain} = origin;
+        let params = {params: Object.assign({},query, _query)};
+        return this.$send({
+          url: originUrl,
+          method: originMethod,
+          params
+        })
+          .then(res => {
+            if(res.status === 200){
+              this.baseData = this.$getChainData(res.data, dataKeyChain);
+            }else{
+              console.log("系统异常，请稍后再试");
+            }
+          })
+          .catch(err => {
+            console.log("系统异常，请稍后再试", err);
+          });
+      }
+    }
   }
 </script>
 <style lang="less">

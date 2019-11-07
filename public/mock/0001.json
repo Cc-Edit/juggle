@@ -1,0 +1,16 @@
+{
+  "status": 200,
+  "isSuccessful": true,
+  "code": 100,
+  "data": {
+    "content": {
+      "bannerList": [
+        "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
+        "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
+        "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
+        "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
+      ]
+    },
+    "pageNum": "0"
+  }
+}

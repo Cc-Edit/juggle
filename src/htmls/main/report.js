@@ -2,8 +2,12 @@ import Vue from 'vue'
 import App from '../pages/report.vue'
 import '../pwa/reportServiceWorker'
 import store from '../store/report.js'
+import { Lazyload } from 'vant';
+
 require("@/assets/js/common");
+Vue.use(Lazyload, {});
 Vue.config.productionTip = false;
+
 const { $getJsFile, $urlParse, $isDev } = Vue.prototype;
 const pageCode = $urlParse().pageCode || '0000'; //页面编码
 

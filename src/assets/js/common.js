@@ -61,6 +61,18 @@ const Util = {
       });
     }
     return _obj;
+  },
+  /**
+   *  获取组件数据
+   * */
+  $getChainData(respData, dataKeyChain) {
+    if(!this.$isNullOrEmpty(dataKeyChain)){
+      let _dataKeyChain = dataKeyChain.split(',');
+      _dataKeyChain.map((key) => {
+        respData = respData[key];
+      });
+    }
+    return respData
   }
 };
 

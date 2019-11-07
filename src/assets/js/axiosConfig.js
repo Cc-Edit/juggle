@@ -90,6 +90,20 @@ const axiosConfig = {
       data: option.params
     });
   },
+  $send: option => {
+    let method = (option.method || 'get').toLowerCase();
+    let options = {
+      url: option.url,
+      method: method
+    };
+    if(method === 'get'){
+      options.params = option.params;
+    }else{
+      options.data = option.params;
+      // options.data = JSON.stringify(option.params.params);
+    }
+    return axiosInstance(options);
+  },
 };
 
 

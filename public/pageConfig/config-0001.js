@@ -14,8 +14,8 @@ var __pageConfig__ = {
       "query": {
         "publishStatus":"3"
       },
-      "baseData": {
-        "originUrl": "/demo/0001.json",
+      "origin": {
+        "originUrl": "/mock/0001.json",
         "originMethod": "get",
         "dataKeyChain": "content"
       }
@@ -23,8 +23,13 @@ var __pageConfig__ = {
     "bodyConfig": [
       {
         "templateId": "BlockSwiper",
-        "prop": {},
-        "childItem": []
+        "prop": {
+          "autoplay": 1000,
+          "duration": 2000,
+          "initial-swipe": 1,
+          "loop": true,
+          "dataKeyChain": "bannerList"
+        }
       }
     ]
   }
