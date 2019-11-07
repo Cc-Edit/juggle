@@ -10,7 +10,7 @@ var __pageConfig__ = {
     backgroundColor: '#FED854'
   },
   "pageConfig": {
-    "DataSource":{
+    "dataSource":{
       "query": {
         "publishStatus":"3"
       },
@@ -20,9 +20,9 @@ var __pageConfig__ = {
         "dataKeyChain": "content"
       }
     },
-    "BodyConfig": [
+    "bodyConfig": [
       {
-        "templateId": "block-swiper",
+        "templateId": "BlockSwiper",
         "prop": {},
         "childItem": []
       }

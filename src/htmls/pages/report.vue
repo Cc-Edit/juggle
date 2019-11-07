@@ -9,16 +9,22 @@
       <p>{{emptyText}}</p>
     </div>
     <div v-else :style="bodyStyle">
-      <van-button type="default"> 默认按钮</van-button>
+      <div v-for="(item, ind) in bodyConfig" :key="ind">
+        <component :is="item.templateId"
+                   :prop="item.prop"
+                   :childItem="item.childItem"></component>
+      </div>
     </div>
   </div>
 </template>
 <script >
   'use strict';
   import { Button } from 'vant';
+  import BlockSwiper from "@/components/block/BlockSwiper.vue";
 
   const components = {
-    [Button.name]: Button
+    [Button.name]: Button,
+    BlockSwiper
   };
 
   export default {
@@ -38,7 +44,13 @@
       };
       pageData = Object.assign(pageData, pageConfig);
       return pageData
-    }
+    },
+    computed: {},
+    watch: {},
+    created() {},
+    mounted() {},
+    destroyed() {},
+    methods: {}
   }
 </script>
 <style lang="less">
