@@ -75,9 +75,10 @@
       color: #fff;
       font-size: 20px;
       text-align: center;
+      overflow: hidden;
       >img{
         width: 100%;
-        height: 100%;
+        height: 116px;
       }
     }
   }
