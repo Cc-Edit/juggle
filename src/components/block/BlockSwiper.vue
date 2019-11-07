@@ -1,5 +1,5 @@
 <template>
-  <div class="bl-sw-body">
+  <div class="bl-sw-body" :style="styleOptions">
     <van-swipe :autoplay="autoplay"
                :duration="duration"
                :initial-swipe="initialSwipe"
@@ -45,14 +45,16 @@
         duration = 500,
         initialSwipe = 0,
         loop = true,
-        dataKeyChain = ""
+        dataKeyChain = "",
+        styleOptions = {}
       } = this.prop;
       return {
         autoplay: autoplay,
         duration: duration,
         initialSwipe: initialSwipe,
         loop: loop,
-        dataKeyChain: dataKeyChain
+        dataKeyChain: dataKeyChain,
+        styleOptions: styleOptions
       };
     },
     computed: {

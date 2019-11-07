@@ -28,7 +28,8 @@ var __pageConfig__ = {
           "duration": 2000,
           "initial-swipe": 1,
           "loop": true,
-          "dataKeyChain": "bannerList"
+          "dataKeyChain": "bannerList",
+          "styleOptions":{}
         }
       }
     ]

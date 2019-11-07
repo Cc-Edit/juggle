@@ -73,13 +73,11 @@
           .then(res => {
             if(res.status === 200){
               this.baseData = this.$getChainData(res.data, dataKeyChain);
-            }else{
-              console.log("系统异常，请稍后再试");
             }
           })
-          .catch(err => {
-            console.log("系统异常，请稍后再试", err);
-          });
+          // .catch(err => {
+          //   console.log("系统异常，请稍后再试", err);
+          // });
       }
     }
   }
