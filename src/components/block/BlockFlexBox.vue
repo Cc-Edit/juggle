@@ -70,14 +70,11 @@
       height: 48px;
     }
     >span{
-      display: inline-block;
-      overflow: hidden;
       font-size: 11px;
-      height: auto;
-      margin-top: 5px;
       text-align: center;
+      display: block;
+      width: 100%;
       color: rgb(102, 102, 102);
-      width: 61px;
       text-overflow: ellipsis;
       white-space: nowrap;
       line-height: 14px;

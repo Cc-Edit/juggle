@@ -60,11 +60,11 @@ var __pageConfig__ = {
                 "justify": "space-around"
               },
               "colData": [
-                { "colName": "充值中心", "dataKeyChain": "A", "colProp": {} },
-                { "colName": "飞猪旅行", "dataKeyChain": "B", "colProp": {  } },
+                { "colName": "充值中心", "dataKeyChain": "E", "colProp": {} },
+                { "colName": "飞猪旅行", "dataKeyChain": "D", "colProp": {  } },
                 { "colName": "领金币", "dataKeyChain": "C", "colProp": {  } },
-                { "colName": "拍卖", "dataKeyChain": "D", "colProp": {  } },
-                { "colName": "分类", "dataKeyChain": "E", "colProp": {  } },
+                { "colName": "拍卖", "dataKeyChain": "B", "colProp": {  } },
+                { "colName": "分类", "dataKeyChain": "A", "colProp": {  } },
               ],
             }
           ],
