@@ -14,8 +14,8 @@
     report.html模板渲染页面已经实现并已在线上进行验证   
 
 ### demo地址：
-    服务器带宽有限，请耐心等待....      
-    全功能demo：[http://juggle.isjs.cn/report.html?pageCode=0001](http://juggle.isjs.cn/report.html?pageCode=0001)  
+服务器带宽有限，请耐心等待....      
+全功能demo：[http://juggle.isjs.cn/report.html?pageCode=0001](http://juggle.isjs.cn/report.html?pageCode=0001)  
 
 ### 配置项文档：https://github.com/adminV/juggle/blob/master/OPTIONS.md 
 
