@@ -7,7 +7,7 @@ var __pageConfig__ = {
   "bodyStyle":{
     width: '100%',
     minHeight: '100%',
-    backgroundColor: '#FED854'
+    backgroundColor: '#fff'
   },
   "pageConfig": {
     "dataSource":{
@@ -74,7 +74,10 @@ var __pageConfig__ = {
             "background-image": "url(http://juggle.isjs.cn/mock/demoImg/bg1.png)",
             "background-repeat": "no-repeat",
             "background-position": "center center",
-            "background-size": "contain"
+            "background-size": "contain",
+            "position": "relative",
+            "top": "-10px",
+            "paddingTop": "10px"
           }
         }
       }
