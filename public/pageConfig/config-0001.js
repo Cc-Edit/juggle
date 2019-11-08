@@ -68,7 +68,9 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫国际",
                     "dataKeyChain": "flexTestData,C",
-                    "styleOptions": {}
+                    "styleOptions": {
+                      "color": "red"
+                    }
                   }
                 },
                 {

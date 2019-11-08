@@ -44,3 +44,20 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
     }
 }
 ```
+
+#### BlockImg
+##### 说明：
+    图片块儿
+##### 用途：
+    懒加载图片库，支持底部文字，顶部文字
+##### 配置项说明：
+```
+{
+    "templateId": "BlockImg",  //组件name
+    "prop": {
+        "text": "天猫", //底部文字
+        "dataKeyChain": "flexTestData,A",    //关联接口数据的key，逗号分割，必填
+        "styleOptions": {}  //底部文字样式
+    }
+}
+```
