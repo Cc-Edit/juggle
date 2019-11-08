@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="col-item">
+    <div :class="styleOptions || 'col-item'">
       <img v-lazy="imgSrc" >
-      <span v-if="!$isNullOrEmpty(text)" :style="styleOptions || {}">{{text}}</span>
+      <span v-if="!$isNullOrEmpty(text)">{{text}}</span>
     </div>
   </div>
 </template>
@@ -54,6 +54,12 @@
 </script>
 <style lang="less">
   .col-item{
+    >img{
+      width: 100%;
+      height: 100px;
+    }
+  }
+  .sm-img{
     >img{
       width: 61px;
       height: 48px;

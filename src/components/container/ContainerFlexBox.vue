@@ -4,7 +4,7 @@
       <h4>{{title}}</h4>
       <span class="container-flex-subtitle">{{subTitle}}</span>
     </div>
-    <van-row v-for="(rowItem, index) in flexOptions" v-bind="rowItem.rowProp" :key="index">
+    <van-row v-for="(rowItem, index) in flexOptions" v-bind="rowItem.rowProp" :key="index" :style="rowItem.styleOptions">
       <van-col v-for="(colItem, colInd) in rowItem.childItem" :key="colInd" v-bind="(rowItem.colProp || {})[colInd]">
         <component :is="colItem.templateId"
                    :prop="colItem.prop"

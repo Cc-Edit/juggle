@@ -52,7 +52,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫",
                     "dataKeyChain": "flexTestData,A",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -60,7 +60,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "聚划算",
                     "dataKeyChain": "flexTestData,B",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -68,9 +68,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫国际",
                     "dataKeyChain": "flexTestData,C",
-                    "styleOptions": {
-                      "color": "red"
-                    }
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -78,7 +76,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "外卖",
                     "dataKeyChain": "flexTestData,D",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -86,7 +84,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫超市",
                     "dataKeyChain": "flexTestData,E",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 }
               ]
@@ -104,7 +102,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "充值中心",
                     "dataKeyChain": "flexTestData,E",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -112,7 +110,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "飞猪旅行",
                     "dataKeyChain": "flexTestData,C",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -120,7 +118,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "领金币",
                     "dataKeyChain": "flexTestData,D",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -128,7 +126,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "拍卖",
                     "dataKeyChain": "flexTestData,B",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 },
                 {
@@ -136,7 +134,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "分类",
                     "dataKeyChain": "flexTestData,A",
-                    "styleOptions": {}
+                    "styleOptions": "sm-img"
                   }
                 }
               ]
@@ -163,7 +161,7 @@ var __pageConfig__ = {
             {
               "rowName": "第一行",
               "rowProp":{
-                "type": "flex",
+                "gutter": 2,
                 "justify": "space-around"
               },
               "colProp": {
@@ -179,17 +177,64 @@ var __pageConfig__ = {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,H",
-                    "styleOptions": {}
+                    "styleOptions": "col-item"
                   }
                 },
                 {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,F",
-                    "styleOptions": {}
+                    "styleOptions": "col-item"
                   }
                 }
-              ]
+              ],
+              "styleOptions":{
+                "paddingBottom":"1px"
+              }
+            },
+            {
+              "rowName": "第二行",
+              "rowProp":{
+                "gutter": 2,
+                "justify": "space-around"
+              },
+              "colProp": {
+                "0":{
+                  "span": 8
+                },
+                "1":{
+                  "span": 8
+                },
+                "2":{
+                  "span": 8
+                }
+              },
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,G",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,J",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,I",
+                    "styleOptions": "col-item"
+                  }
+                }
+              ],
+              "styleOptions":{
+                "paddingBottom":"1px"
+              }
             }
           ],
           "styleOptions":{
