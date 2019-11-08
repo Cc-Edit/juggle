@@ -42,32 +42,40 @@ var __pageConfig__ = {
             {
               "rowName": "第一行",
               "rowProp":{
-                "gutter": 2,
+                "type": "flex",
+                "justify": "space-around"
               },
               "colData": [
-                { "colName": "天猫", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "聚划算", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "天猫国际", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "外卖", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "天猫超市", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "天猫", "dataKeyChain": "A", "colProp": { } },
+                { "colName": "聚划算", "dataKeyChain": "B", "colProp": {  } },
+                { "colName": "天猫国际", "dataKeyChain": "C", "colProp": { } },
+                { "colName": "外卖", "dataKeyChain": "D", "colProp": { } },
+                { "colName": "天猫超市", "dataKeyChain": "E", "colProp": { } },
               ],
             },
             {
               "rowName": "第二行",
               "rowProp":{
-                "gutter": 2,
+                "type": "flex",
+                "justify": "space-around"
               },
               "colData": [
-                { "colName": "充值中心", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "飞猪旅行", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "领金币", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "拍卖", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
-                { "colName": "分类", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "充值中心", "dataKeyChain": "A", "colProp": {} },
+                { "colName": "飞猪旅行", "dataKeyChain": "B", "colProp": {  } },
+                { "colName": "领金币", "dataKeyChain": "C", "colProp": {  } },
+                { "colName": "拍卖", "dataKeyChain": "D", "colProp": {  } },
+                { "colName": "分类", "dataKeyChain": "E", "colProp": {  } },
               ],
             }
           ],
           "dataKeyChain": "flexTestData",
-          "styleOptions":{}
+          "styleOptions":{
+            "width": "100%",
+            "background-image": "url(http://juggle.isjs.cn/mock/demoImg/bg1.png)",
+            "background-repeat": "no-repeat",
+            "background-position": "center center",
+            "background-size": "contain"
+          }
         }
       }
     ]

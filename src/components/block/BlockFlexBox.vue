@@ -1,9 +1,8 @@
 <template>
   <div :style="styleOptions">
-
     <van-row v-for="(rowItem, index) in flexOptions" v-bind="rowItem.rowProp" :key="index">
       <van-col v-for="(colItem, colInd) in rowItem.colData" :key="colInd" v-bind="colItem.colProp">
-        <div>
+        <div class="col-item">
           <img v-lazy="$getChainData(flexData, colItem.dataKeyChain)" >
           <span :style="colItem.styleOptions || {}">{{colItem.colName}}</span>
         </div>
@@ -64,4 +63,24 @@
     methods: {}
   };
 </script>
-<style lang="less"></style>
+<style lang="less">
+  .col-item{
+    >img{
+      width: 61px;
+      height: 48px;
+    }
+    >span{
+      display: inline-block;
+      overflow: hidden;
+      font-size: 11px;
+      height: auto;
+      margin-top: 5px;
+      text-align: center;
+      color: rgb(102, 102, 102);
+      width: 61px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 14px;
+    }
+  }
+</style>
