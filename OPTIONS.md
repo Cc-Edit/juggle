@@ -1,34 +1,32 @@
 ## 配置项说明：
 
 ### 公共配置：
-pageName:  页面标题
-author:  作者姓名，说明作用，不参与逻辑。
-PM:  产品姓名，说明作用，不参与逻辑。
-createData:  编辑日期，说明作用，不参与逻辑。
+pageName:  页面标题  
+author:  作者姓名，说明作用，不参与逻辑。  
+PM:  产品姓名，说明作用，不参与逻辑。  
+createData:  编辑日期，说明作用，不参与逻辑。   
 
-bodyStyle:  body容器样式，CSS对象，可为空
-pageConfig:  页面结构配置
-pageConfig.dataSource  页面数据源，当一个页面多个接口时可为空
-pageConfig.dataSource.query  数据源接口参数，可为空
-pageConfig.dataSource.baseData  数据源接口配置
-pageConfig.dataSource.baseData.originUrl  数据源接口地址
-pageConfig.dataSource.baseData.originMethod  数据源接口请求方式
-pageConfig.dataSource.baseData.dataKeyChain  数据源接口返回值对应key
-pageConfig.bodyConfig  页面组件层级结构
+bodyStyle:  body容器样式，CSS对象，可为空  
+pageConfig:  页面结构配置    
+pageConfig.dataSource  页面数据源，当一个页面多个接口时可为空   
+pageConfig.dataSource.query  数据源接口参数，可为空   
+pageConfig.dataSource.baseData  数据源接口配置   
+pageConfig.dataSource.baseData.originUrl  数据源接口地址   
+pageConfig.dataSource.baseData.originMethod  数据源接口请求方式   
+pageConfig.dataSource.baseData.dataKeyChain  数据源接口返回值对应key    
+pageConfig.bodyConfig  页面组件层级结构   
 
-styleOptions 出现在各个组件参数中，指代组件样式
-dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例： 
-"data,bannerList,0" 等同于 data["bannerList"][0]
+styleOptions 出现在各个组件参数中，指代组件样式   
+dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例：    
+"data,bannerList,0" 等同于 data["bannerList"][0]   
 
 ### 组件配置：
 
 #### BlockSwiper
 ##### 说明：
     轮播组件，基于vant封装。可接受图片，文字等
-    
 ##### 用途：
     适用于banner元素
-
 ##### 配置项说明：
 ```
 {
