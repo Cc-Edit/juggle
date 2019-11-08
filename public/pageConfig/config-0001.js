@@ -38,7 +38,35 @@ var __pageConfig__ = {
       {
         "templateId": "BlockFlexBox",
         "prop": {
-          "dataKeyChain": "bannerList",
+          "flexOptions":[
+            {
+              "rowName": "第一行",
+              "rowProp":{
+                "gutter": 2,
+              },
+              "colData": [
+                { "colName": "天猫", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "聚划算", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "天猫国际", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "外卖", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "天猫超市", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+              ],
+            },
+            {
+              "rowName": "第二行",
+              "rowProp":{
+                "gutter": 2,
+              },
+              "colData": [
+                { "colName": "充值中心", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "飞猪旅行", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "领金币", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "拍卖", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+                { "colName": "分类", "dataKeyChain": "A", "colProp": { "span": 0.25, "offset": 0.25 } },
+              ],
+            }
+          ],
+          "dataKeyChain": "flexTestData",
           "styleOptions":{}
         }
       }

@@ -9,7 +9,14 @@
         "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
         "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
         "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
-      ]
+      ],
+      "flexTestData": {
+        "E" : "http://juggle.isjs.cn/mock/demoImg/flextext1.png",
+        "A" : "http://juggle.isjs.cn/mock/demoImg/flextext2.png",
+        "B" : "http://juggle.isjs.cn/mock/demoImg/flextext3.png",
+        "C" : "http://juggle.isjs.cn/mock/demoImg/flextext4.png",
+        "D" : "http://juggle.isjs.cn/mock/demoImg/flextext5.png"
+      }
     },
     "pageNum": "0"
   }

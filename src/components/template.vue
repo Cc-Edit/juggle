@@ -3,9 +3,25 @@
 </template>
 <script type="text/ecmascript-6">
   export default {
-    name: 'Comm',
+    name: 'ComponentName',
     components: {},
-    props: {},
+    props: {
+      prop: {
+        default: () => {
+          return {};
+        }
+      },
+      childItem: {
+        default: () => {
+          return [];
+        }
+      },
+      baseData: {
+        default: () => {
+          return {};
+        }
+      }
+    },
     data() {},
     computed: {},
     watch: {},

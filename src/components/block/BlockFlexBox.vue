@@ -1,9 +1,13 @@
 <template>
   <div :style="styleOptions">
-    <van-row type="flex">
-      <van-col span="6">span: 6</van-col>
-      <van-col span="6">span: 6</van-col>
-      <van-col span="6">span: 6</van-col>
+
+    <van-row v-for="(rowItem, index) in flexOptions" v-bind="rowItem.rowProp" :key="index">
+      <van-col v-for="(colItem, colInd) in rowItem.colData" :key="colInd" v-bind="colItem.colProp">
+        <div>
+          <img v-lazy="$getChainData(flexData, colItem.dataKeyChain)" >
+          <span :style="colItem.styleOptions || {}">{{colItem.colName}}</span>
+        </div>
+      </van-col>
     </van-row>
   </div>
 </template>
@@ -18,13 +22,41 @@
   export default {
     name: 'BlockFlexBox',
     components: components,
-    props: {},
-    data() {
-      return {
-        styleOptions:{}
+    props: {
+      prop: {
+        default: () => {
+          return {};
+        }
+      },
+      childItem: {
+        default: () => {
+          return [];
+        }
+      },
+      baseData: {
+        default: () => {
+          return {};
+        }
       }
     },
-    computed: {},
+    data() {
+      let {
+        flexOptions = {},
+        dataKeyChain = "",
+        styleOptions = {}
+      } = this.prop;
+
+      return {
+        styleOptions: styleOptions,
+        dataKeyChain: dataKeyChain,
+        flexOptions: flexOptions
+      }
+    },
+    computed: {
+      flexData(){
+        return this.$getChainData(this.baseData, this.dataKeyChain);
+      }
+    },
     watch: {},
     created() {},
     mounted() {},

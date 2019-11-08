@@ -22,10 +22,12 @@
   'use strict';
   import { Button } from 'vant';
   import BlockSwiper from "@/components/block/BlockSwiper.vue";
+  import BlockFlexBox from "@/components/block/BlockFlexBox.vue";
 
   const components = {
     [Button.name]: Button,
-    BlockSwiper
+    BlockSwiper,
+    BlockFlexBox,
   };
 
   export default {
