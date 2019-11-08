@@ -3,7 +3,7 @@
 </template>
 <script type="text/ecmascript-6">
   export default {
-    name: 'BlockSwiper',
+    name: 'Comm',
     components: {},
     props: {},
     data() {},

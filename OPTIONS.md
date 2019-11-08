@@ -16,10 +16,33 @@ pageConfig.dataSource.baseData.originMethod  数据源接口请求方式
 pageConfig.dataSource.baseData.dataKeyChain  数据源接口返回值对应key
 pageConfig.bodyConfig  页面组件层级结构
 
+styleOptions 出现在各个组件参数中，指代组件样式
+dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例： 
+"data,bannerList,0" 等同于 data["bannerList"][0]
 
 ### 组件配置：
 
-#### block-swiper：
+#### BlockSwiper
 ##### 说明：
+    轮播组件，基于vant封装。可接受图片，文字等
+    
 ##### 用途：
-##### 配置项：
+    适用于banner元素
+
+##### 配置项说明：
+```
+{
+    "templateId": "BlockSwiper",  //组件Name一一对应，必填
+    "prop": {  //内部参数
+        "swiperProp":{   //vant swiper所需所有prop
+            "autoplay": 3000,
+            "duration": 2000,
+            "initial-swipe": 1,
+            "loop": true,
+        },
+        "swiperType": "img",  //轮播类型, img/text，默认img
+        "dataKeyChain": "bannerList", //关联接口数据的key，逗号分割，必填
+        "styleOptions":{} //容器样式
+    }
+}
+```

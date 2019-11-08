@@ -1,14 +1,29 @@
 <template>
-  <div>
-
+  <div :style="styleOptions">
+    <van-row type="flex">
+      <van-col span="6">span: 6</van-col>
+      <van-col span="6">span: 6</van-col>
+      <van-col span="6">span: 6</van-col>
+    </van-row>
   </div>
 </template>
 <script type="text/ecmascript-6">
+  import { Row, Col } from 'vant';
+
+  const components = {
+    [Row.name]: Row,
+    [Col.name]: Col
+  };
+
   export default {
     name: 'BlockFlexBox',
-    components: {},
+    components: components,
     props: {},
-    data() {},
+    data() {
+      return {
+        styleOptions:{}
+      }
+    },
     computed: {},
     watch: {},
     created() {},

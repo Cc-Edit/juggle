@@ -78,3 +78,24 @@ PC端：
 真正的组件需要结合业务进行整理，抽象出自己的组件库，电商多是展示，B端多是列表，场景不同通用组件就不同。
 
 
+### 新增组件步骤：
+每次接触到新需求时，应该尽可能抽象出来成为独立组件，不论是从提高开发效率的角度还是提高测试效率的角度看，这么做都是必要的。
+juggle不关注组件，只关注结构。所以你可以直接引入组件库的组件，也可以基于组件库二次开发封装一个新的组件。
+新的组件放在 /src/components/ 目录下。按照组件类型区分为block，container，public。
+在对应目录下新增组件文件即可。
+第二步是将新添加的组件注册到 /src/htmls/pages/report.vue 入口中即可
+简单两步就可以在配置中使用该组件了：
+```
+   {
+       "templateId": "BlockFlexBox",
+       "prop": {
+         "dataKeyChain": "bannerList",
+         "styleOptions":{}
+       },
+       "childItem": []
+   }
+
+```
+
+要注意，juggle的结构对组件的prop进行了约定，只有：prop，childItem，baseData 三个参数。
+也就是说，新组件的所有参数都要包含在 prop 下，在组件内部进行拆解。
