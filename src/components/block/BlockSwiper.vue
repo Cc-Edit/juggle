@@ -49,10 +49,10 @@
         styleOptions = {}
       } = this.prop;
       return {
-        swiperProp: swiperProp,
-        dataKeyChain: dataKeyChain,
-        swiperType: swiperType,
-        styleOptions: styleOptions
+        swiperProp,
+        dataKeyChain,
+        swiperType,
+        styleOptions
       };
     },
     computed: {

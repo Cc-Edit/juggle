@@ -69,7 +69,4 @@
       line-height: 14px;
     }
   }
-  .van-row{
-    margin-bottom: 10px;
-  }
 </style>

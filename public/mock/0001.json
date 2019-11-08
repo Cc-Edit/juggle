@@ -11,11 +11,17 @@
         "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
       ],
       "flexTestData": {
-        "E" : "http://juggle.isjs.cn/mock/demoImg/flextext1.png",
-        "A" : "http://juggle.isjs.cn/mock/demoImg/flextext2.png",
-        "B" : "http://juggle.isjs.cn/mock/demoImg/flextext3.png",
-        "C" : "http://juggle.isjs.cn/mock/demoImg/flextext4.png",
-        "D" : "http://juggle.isjs.cn/mock/demoImg/flextext5.png"
+        "E" : "http://juggle.isjs.cn/mock/demoImg/flextest1.png",
+        "A" : "http://juggle.isjs.cn/mock/demoImg/flextest2.png",
+        "B" : "http://juggle.isjs.cn/mock/demoImg/flextest3.png",
+        "C" : "http://juggle.isjs.cn/mock/demoImg/flextest4.png",
+        "D" : "http://juggle.isjs.cn/mock/demoImg/flextest5.png",
+        "F" : "http://juggle.isjs.cn/mock/demoImg/flextest6.png",
+        "G" : "http://juggle.isjs.cn/mock/demoImg/flextest7.png",
+        "H" : "http://juggle.isjs.cn/mock/demoImg/flexTest8.png",
+        "I" : "http://juggle.isjs.cn/mock/demoImg/flexTest9.png",
+        "J" : "http://juggle.isjs.cn/mock/demoImg/flexTest10.png",
+        "K" : "http://juggle.isjs.cn/mock/demoImg/flexTest11.png"
       }
     },
     "pageNum": "0"

@@ -7,7 +7,7 @@ var __pageConfig__ = {
   "bodyStyle":{
     width: '100%',
     minHeight: '100%',
-    backgroundColor: '#fff'
+    backgroundColor: '#f4f4f4'
   },
   "pageConfig": {
     "dataSource":{
@@ -151,6 +151,50 @@ var __pageConfig__ = {
             "position": "relative",
             "top": "-10px",
             "paddingTop": "10px"
+          }
+        }
+      },
+      {
+        "templateId": "ContainerFlexBox",
+        "prop": {
+          "title": "每日优选",
+          "subTitle": "日常版の造物节",
+          "flexOptions": [
+            {
+              "rowName": "第一行",
+              "rowProp":{
+                "type": "flex",
+                "justify": "space-around"
+              },
+              "colProp": {
+                "0":{
+                  "span": 16
+                },
+                "1":{
+                  "span": 8
+                }
+              },
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,H",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,F",
+                    "styleOptions": {}
+                  }
+                }
+              ]
+            }
+          ],
+          "styleOptions":{
+            "width": "100%",
+            "backgroundColor": "#fff"
           }
         }
       }
