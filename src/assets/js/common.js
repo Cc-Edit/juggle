@@ -69,7 +69,9 @@ const Util = {
     if(!this.$isNullOrEmpty(dataKeyChain)){
       let _dataKeyChain = dataKeyChain.split(',');
       _dataKeyChain.map((key) => {
-        respData = respData[key];
+        if(!this.$isNullOrEmpty(respData[key])){
+          respData = respData[key];
+        }
       });
     }
     return respData

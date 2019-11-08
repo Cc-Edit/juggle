@@ -36,7 +36,7 @@ var __pageConfig__ = {
         }
       },
       {
-        "templateId": "BlockFlexBox",
+        "templateId": "ContainerFlexBox",
         "prop": {
           "flexOptions":[
             {
@@ -45,13 +45,49 @@ var __pageConfig__ = {
                 "type": "flex",
                 "justify": "space-around"
               },
-              "colData": [
-                { "colName": "天猫", "dataKeyChain": "A", "colProp": { } },
-                { "colName": "聚划算", "dataKeyChain": "B", "colProp": {  } },
-                { "colName": "天猫国际", "dataKeyChain": "C", "colProp": { } },
-                { "colName": "外卖", "dataKeyChain": "D", "colProp": { } },
-                { "colName": "天猫超市", "dataKeyChain": "E", "colProp": { } },
-              ],
+              "colProp": {},
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "天猫",
+                    "dataKeyChain": "flexTestData,A",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "聚划算",
+                    "dataKeyChain": "flexTestData,B",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "天猫国际",
+                    "dataKeyChain": "flexTestData,C",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "外卖",
+                    "dataKeyChain": "flexTestData,D",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "天猫超市",
+                    "dataKeyChain": "flexTestData,E",
+                    "styleOptions": {}
+                  }
+                }
+              ]
             },
             {
               "rowName": "第二行",
@@ -59,16 +95,51 @@ var __pageConfig__ = {
                 "type": "flex",
                 "justify": "space-around"
               },
-              "colData": [
-                { "colName": "充值中心", "dataKeyChain": "E", "colProp": {} },
-                { "colName": "飞猪旅行", "dataKeyChain": "D", "colProp": {  } },
-                { "colName": "领金币", "dataKeyChain": "C", "colProp": {  } },
-                { "colName": "拍卖", "dataKeyChain": "B", "colProp": {  } },
-                { "colName": "分类", "dataKeyChain": "A", "colProp": {  } },
-              ],
+              "colProp": {},
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "充值中心",
+                    "dataKeyChain": "flexTestData,E",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "飞猪旅行",
+                    "dataKeyChain": "flexTestData,C",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "领金币",
+                    "dataKeyChain": "flexTestData,D",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "拍卖",
+                    "dataKeyChain": "flexTestData,B",
+                    "styleOptions": {}
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "text": "分类",
+                    "dataKeyChain": "flexTestData,A",
+                    "styleOptions": {}
+                  }
+                }
+              ]
             }
           ],
-          "dataKeyChain": "flexTestData",
           "styleOptions":{
             "width": "100%",
             "background-image": "url(http://juggle.isjs.cn/mock/demoImg/bg1.png)",

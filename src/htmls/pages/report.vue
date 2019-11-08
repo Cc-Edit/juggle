@@ -20,18 +20,8 @@
 </template>
 <script >
   'use strict';
-  import { Button } from 'vant';
-  import BlockSwiper from "@/components/block/BlockSwiper.vue";
-  import BlockFlexBox from "@/components/block/BlockFlexBox.vue";
-
-  const components = {
-    [Button.name]: Button,
-    BlockSwiper,
-    BlockFlexBox,
-  };
-
   export default {
-    components: components,
+    components: {},
     name: 'App',
     data() {
       let {pageConfig = {}, emptyPage = false, bodyStyle = {}} = this.$root.$options.propsData;

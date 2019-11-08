@@ -4,6 +4,21 @@ import '../pwa/reportServiceWorker'
 import store from '../store/report.js'
 import { Lazyload } from 'vant';
 
+
+import BlockImg from "@/components/block/BlockImg.vue";
+import BlockSwiper from "@/components/block/BlockSwiper.vue";
+import ContainerFlexBox from "@/components/container/ContainerFlexBox.vue";
+
+const components = {
+  BlockImg,
+  BlockSwiper,
+  ContainerFlexBox,
+};
+
+Vue.mixin({
+  components: components
+});
+
 require("@/assets/js/common");
 Vue.use(Lazyload, {});
 Vue.config.productionTip = false;

@@ -88,7 +88,7 @@ PC端：
 juggle不关注组件，只关注结构。所以你可以直接引入组件库的组件，也可以基于组件库二次开发封装一个新的组件。
 新的组件放在 /src/components/ 目录下。按照组件类型区分为block，container，public。
 在对应目录下新增组件文件即可。
-第二步是将新添加的组件注册到 /src/htmls/pages/report.vue 入口中即可
+第二步是将新添加的组件注册到 /src/htmls/main/report.js 入口的mixin中即可
 简单两步就可以在配置中使用该组件了：
 ```
    {

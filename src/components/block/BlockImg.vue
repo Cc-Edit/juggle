@@ -1,26 +1,15 @@
 <template>
-  <div :style="styleOptions">
-    <van-row v-for="(rowItem, index) in flexOptions" v-bind="rowItem.rowProp" :key="index">
-      <van-col v-for="(colItem, colInd) in rowItem.colData" :key="colInd" v-bind="colItem.colProp">
-        <div class="col-item">
-          <img v-lazy="$getChainData(flexData, colItem.dataKeyChain)" >
-          <span :style="colItem.styleOptions || {}">{{colItem.colName}}</span>
-        </div>
-      </van-col>
-    </van-row>
+  <div>
+    <div class="col-item">
+      <img v-lazy="imgSrc" >
+      <span v-if="!$isNullOrEmpty(text)" :style="styleOptions || {}">{{text}}</span>
+    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-  import { Row, Col } from 'vant';
-
-  const components = {
-    [Row.name]: Row,
-    [Col.name]: Col
-  };
-
   export default {
-    name: 'BlockFlexBox',
-    components: components,
+    name: 'BlockImg',
+    components: {},
     props: {
       prop: {
         default: () => {
@@ -40,19 +29,19 @@
     },
     data() {
       let {
-        flexOptions = {},
-        dataKeyChain = "",
-        styleOptions = {}
+        styleOptions = {},
+        dataKeyChain = '',
+        text = '',
       } = this.prop;
 
       return {
-        styleOptions: styleOptions,
-        dataKeyChain: dataKeyChain,
-        flexOptions: flexOptions
-      }
+        text,
+        dataKeyChain,
+        styleOptions
+      };
     },
     computed: {
-      flexData(){
+      imgSrc(){
         return this.$getChainData(this.baseData, this.dataKeyChain);
       }
     },
