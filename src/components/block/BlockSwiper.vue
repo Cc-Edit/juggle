@@ -1,12 +1,14 @@
 <template>
   <div class="bl-sw-body" :style="styleOptions">
-    <van-swipe :autoplay="autoplay"
-               :duration="duration"
-               :initial-swipe="initialSwipe"
-               :loop="loop"
+    <van-swipe v-bind="swiperProp"
                indicator-color="white">
       <van-swipe-item v-for="(image, index) in bannerData" :key="index">
-        <img v-lazy="image" >
+        <template v-if="swiperType === 'img'">
+          <img v-lazy="image" >
+        </template>
+        <template v-else>
+          {{image}}
+        </template>
       </van-swipe-item>
     </van-swipe>
   </div>
@@ -41,19 +43,15 @@
     },
     data() {
       let {
-        autoplay = 1000,
-        duration = 500,
-        initialSwipe = 0,
-        loop = true,
+        swiperProp = {},
         dataKeyChain = "",
+        swiperType = "img",
         styleOptions = {}
       } = this.prop;
       return {
-        autoplay: autoplay,
-        duration: duration,
-        initialSwipe: initialSwipe,
-        loop: loop,
+        swiperProp: swiperProp,
         dataKeyChain: dataKeyChain,
+        swiperType: swiperType,
         styleOptions: styleOptions
       };
     },

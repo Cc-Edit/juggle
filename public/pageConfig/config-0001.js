@@ -24,10 +24,20 @@ var __pageConfig__ = {
       {
         "templateId": "BlockSwiper",
         "prop": {
-          "autoplay": 3000,
-          "duration": 2000,
-          "initial-swipe": 1,
-          "loop": true,
+          "swiperProp":{
+            "autoplay": 3000,
+            "duration": 2000,
+            "initial-swipe": 1,
+            "loop": true,
+          },
+          "swiperType": "img",
+          "dataKeyChain": "bannerList",
+          "styleOptions":{}
+        }
+      },
+      {
+        "templateId": "BlockFlexBox",
+        "prop": {
           "dataKeyChain": "bannerList",
           "styleOptions":{}
         }
