@@ -282,100 +282,165 @@ var __pageConfig__ = {
                     },
                     "swiperType": "img",
                     "dataKeyChain": "bannerList",
-                    "styleOptions":{}
+                    "styleOptions":{
+                      "height": "115px",
+                      "overflow": "hidden"
+                    }
                   }
                 }
               ],
               "styleOptions":{
-                "paddingBottom":"1px"
+                "paddingBottom":"0px"
               }
             },
             {
               "rowName": "第二行",
               "rowProp":{
-                "gutter": 2,
+                "gutter": 4,
                 "justify": "space-around"
               },
               "colProp": {
                 "0":{
-                  "span": 8
+                  "span": 6
                 },
                 "1":{
-                  "span": 8
-                },
-                "2":{
-                  "span": 8
+                  "span": 18
                 }
               },
               "childItem": [
                 {
                   "templateId": "BlockImg",
                   "prop": {
-                    "dataKeyChain": "flexTestData,G",
-                    "styleOptions": "col-item"
+                    "dataKeyChain": "flexTestData,S",
+                    "styleOptions": "col-item-2"
                   }
                 },
                 {
-                  "templateId": "BlockImg",
+                  "templateId": "ContainerFlexBox",
                   "prop": {
-                    "dataKeyChain": "flexTestData,J",
-                    "styleOptions": "col-item"
-                  }
-                },
-                {
-                  "templateId": "BlockImg",
-                  "prop": {
-                    "dataKeyChain": "flexTestData,I",
-                    "styleOptions": "col-item"
+                    "flexOptions": [
+                      {
+                        "rowName": "第一行",
+                        "rowProp":{
+                          "gutter": 4,
+                          "justify": "space-around"
+                        },
+                        "colProp": {
+                          "0":{
+                            "span": 6
+                          },
+                          "1":{
+                            "span": 6
+                          },
+                          "2":{
+                            "span": 6
+                          },
+                          "3":{
+                            "span": 6
+                          }
+                        },
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,L",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,N",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,Q",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,O",
+                              "styleOptions": "col-item-6"
+                            }
+                          }
+                        ],
+                        "styleOptions":{
+                          "paddingBottom":"2px",
+                          "backgroundColor": "#9E9B9B",
+                        }
+                      },
+                      {
+                        "rowName": "第二行",
+                        "rowProp":{
+                          "gutter": 4,
+                          "justify": "space-around"
+                        },
+                        "colProp": {
+                          "0":{
+                            "span": 6
+                          },
+                          "1":{
+                            "span": 6
+                          },
+                          "2":{
+                            "span": 6
+                          },
+                          "3":{
+                            "span": 6
+                          }
+                        },
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,Q",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,O",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,N",
+                              "styleOptions": "col-item-6"
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,L",
+                              "styleOptions": "col-item-6"
+                            }
+                          }
+                        ],
+                        "styleOptions":{
+                          "backgroundColor": "#9E9B9B",
+                          "paddingBottom":"0px"
+                        }
+                      }
+                    ],
+                    "styleOptions":{
+                      "width": "100%",
+                      "backgroundColor": "#fff"
+                    }
                   }
                 }
               ],
               "styleOptions":{
-                "paddingBottom":"1px"
-              }
-            },
-            {
-              "rowName": "第二行",
-              "rowProp":{
-                "gutter": 2,
-                "justify": "space-around"
-              },
-              "colProp": {
-                "0":{
-                  "span": 8
-                },
-                "1":{
-                  "span": 8
-                },
-                "2":{
-                  "span": 8
-                }
-              },
-              "childItem": [
-                {
-                  "templateId": "BlockImg",
-                  "prop": {
-                    "dataKeyChain": "flexTestData,G",
-                    "styleOptions": "col-item"
-                  }
-                },
-                {
-                  "templateId": "BlockImg",
-                  "prop": {
-                    "dataKeyChain": "flexTestData,J",
-                    "styleOptions": "col-item"
-                  }
-                },
-                {
-                  "templateId": "BlockImg",
-                  "prop": {
-                    "dataKeyChain": "flexTestData,I",
-                    "styleOptions": "col-item"
-                  }
-                }
-              ],
-              "styleOptions":{
-                "paddingBottom":"1px"
+                "paddingTop":"4px",
+                "paddingBottom":"0px",
+                "backgroundColor": "#9E9B9B",
               }
             }
           ],

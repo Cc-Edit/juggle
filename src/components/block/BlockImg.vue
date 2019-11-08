@@ -56,7 +56,20 @@
   .col-item{
     >img{
       width: 100%;
-      height: 100px;
+      height: 115px;
+      overflow: hidden;
+    }
+  }
+  .col-item-6{
+    >img{
+      width: 100%;
+      height: 70px;
+    }
+  }
+  .col-item-2{
+    >img{
+      width: 100%;
+      height: 146px;
     }
   }
   .sm-img{
