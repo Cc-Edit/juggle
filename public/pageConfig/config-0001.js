@@ -242,6 +242,149 @@ var __pageConfig__ = {
             "backgroundColor": "#fff"
           }
         }
+      },
+      {
+        "templateId": "ContainerFlexBox",
+        "prop": {
+          "title": "买遍全球",
+          "subTitle": "正品保障15天售后无忧",
+          "flexOptions": [
+            {
+              "rowName": "第一行",
+              "rowProp":{
+                "gutter": 2,
+                "justify": "space-around"
+              },
+              "colProp": {
+                "0":{
+                  "span": 8
+                },
+                "1":{
+                  "span": 16
+                }
+              },
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,J",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockSwiper",
+                  "prop": {
+                    "swiperProp":{
+                      "autoplay": 2000,
+                      "duration": 1000,
+                      "initial-swipe": 3,
+                      "loop": true,
+                    },
+                    "swiperType": "img",
+                    "dataKeyChain": "bannerList",
+                    "styleOptions":{}
+                  }
+                }
+              ],
+              "styleOptions":{
+                "paddingBottom":"1px"
+              }
+            },
+            {
+              "rowName": "第二行",
+              "rowProp":{
+                "gutter": 2,
+                "justify": "space-around"
+              },
+              "colProp": {
+                "0":{
+                  "span": 8
+                },
+                "1":{
+                  "span": 8
+                },
+                "2":{
+                  "span": 8
+                }
+              },
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,G",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,J",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,I",
+                    "styleOptions": "col-item"
+                  }
+                }
+              ],
+              "styleOptions":{
+                "paddingBottom":"1px"
+              }
+            },
+            {
+              "rowName": "第二行",
+              "rowProp":{
+                "gutter": 2,
+                "justify": "space-around"
+              },
+              "colProp": {
+                "0":{
+                  "span": 8
+                },
+                "1":{
+                  "span": 8
+                },
+                "2":{
+                  "span": 8
+                }
+              },
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,G",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,J",
+                    "styleOptions": "col-item"
+                  }
+                },
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,I",
+                    "styleOptions": "col-item"
+                  }
+                }
+              ],
+              "styleOptions":{
+                "paddingBottom":"1px"
+              }
+            }
+          ],
+          "styleOptions":{
+            "width": "100%",
+            "marginTop": "10px",
+            "backgroundColor": "#fff"
+          }
+        }
       }
     ]
   }
