@@ -70,33 +70,33 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
 ##### 配置项说明：
 ```
 {
-"templateId": "ContainerFlexBox",  //模板名称
-"prop": {
-  "flexOptions":[   //行数组
-    {
-      "rowName": "第一行",  //说明性质，不起作用
-      "rowProp":{  //<van-row> props
-        "type": "flex",
-        "justify": "space-around"
-      },
-      "colProp": {}, //<van-col> props
-      "childItem": [ //子元素，可以包含其他组件
-        {
-          "templateId": "BlockImg",
-          "prop": {
-            "text": "天猫",
-            "dataKeyChain": "flexTestData,A",
-            "styleOptions": "sm-img"
+  "templateId": "ContainerFlexBox",  //模板名称
+  "prop": {
+    "flexOptions":[   //行数组
+      {
+        "rowName": "第一行",  //说明性质，不起作用
+        "rowProp":{  //<van-row> props
+          "type": "flex",
+          "justify": "space-around"
+        },
+        "colProp": {}, //<van-col> props
+        "childItem": [ //子元素，可以包含其他组件
+          {
+            "templateId": "BlockImg",
+            "prop": {
+              "text": "天猫",
+              "dataKeyChain": "flexTestData,A",
+              "styleOptions": "sm-img"
+            }
           }
-        }
-      ]
+        ]
+      }
+    ],
+    "styleOptions":{  //自定义容器样式
+      "width": "100%",
+      "top": "-10px",
+      "paddingTop": "10px"
     }
-  ],
-  "styleOptions":{  //自定义容器样式
-    "width": "100%",
-    "top": "-10px",
-    "paddingTop": "10px"
   }
-}
 }
 ```
