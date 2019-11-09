@@ -69,6 +69,7 @@
 </script>
 <style lang="less">
   .container-flex{
+    background-color: #fff;
     .van-row{
       background-color: #fff;
     }

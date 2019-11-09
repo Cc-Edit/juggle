@@ -139,7 +139,6 @@ var __pageConfig__ = {
           "styleOptions":{
             "marginBottom": "10px",
             "padding": "5px 0 10px",
-            "backgroundColor": "#fff"
           }
         }
       },
@@ -443,8 +442,7 @@ var __pageConfig__ = {
                       }
                     ],
                     "styleOptions":{
-                      "width": "100%",
-                      "backgroundColor": "#fff"
+                      "width": "100%"
                     }
                   }
                 }
@@ -458,8 +456,98 @@ var __pageConfig__ = {
           ],
           "styleOptions":{
             "width": "100%",
-            "marginTop": "10px",
-            "backgroundColor": "#fff"
+            "marginTop": "10px"
+          }
+        }
+      },
+      {
+        "templateId": "ContainerTab",
+        "prop": {
+          "defaultActive": 0,
+          "tabsProp":{
+            "background": "#fff",
+            "line-height": "2px",
+            "animated": true,
+            "border": true,
+            "sticky": true,
+            "swipeable": true
+          },
+          "tabsOptions": [
+            {
+              "tabTitle": "测试1",
+              "childItem": [
+                {
+                  "templateId": "BlockSwiper",
+                  "prop": {
+                    "swiperProp":{
+                      "autoplay": 3000,
+                      "duration": 2000,
+                      "initial-swipe": 1,
+                      "loop": true,
+                    },
+                    "swiperType": "img",
+                    "dataKeyChain": "bannerList",
+                    "styleOptions":{}
+                  }
+                }
+              ],
+              "styleOptions":{}
+            },
+            {
+              "tabTitle": "测试2",
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,N",
+                    "styleOptions":{}
+                  }
+                },
+              ],
+              "styleOptions":{}
+            },
+            {
+              "tabTitle": "测试3",
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,N",
+                    "styleOptions":{}
+                  }
+                },
+              ],
+              "styleOptions":{}
+            },
+            {
+              "tabTitle": "测试4",
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,N",
+                    "styleOptions":{}
+                  }
+                },
+              ],
+              "styleOptions":{}
+            },
+            {
+              "tabTitle": "测试5",
+              "childItem": [
+                {
+                  "templateId": "BlockImg",
+                  "prop": {
+                    "dataKeyChain": "flexTestData,N",
+                    "styleOptions":{}
+                  }
+                },
+              ],
+              "styleOptions":{}
+            }
+          ],
+          "styleOptions":{
+            "marginTop": "10px"
           }
         }
       }

@@ -8,11 +8,13 @@ import { Lazyload } from 'vant';
 import BlockImg from "@/components/block/BlockImg.vue";
 import BlockSwiper from "@/components/block/BlockSwiper.vue";
 import ContainerFlexBox from "@/components/container/ContainerFlexBox.vue";
+import ContainerTab from "@/components/container/ContainerTab.vue";
 
 const components = {
   BlockImg,
   BlockSwiper,
   ContainerFlexBox,
+  ContainerTab,
 };
 
 Vue.mixin({
