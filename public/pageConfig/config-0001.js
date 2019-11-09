@@ -502,7 +502,7 @@ var __pageConfig__ = {
               "styleOptions":{}
             },
             {
-              "tabTitle": "测试2",
+              "tabTitle": "异步数据",
               "childItem": [
                 {
                   "templateId": "BlockImg",
@@ -515,33 +515,222 @@ var __pageConfig__ = {
               "styleOptions":{}
             },
             {
-              "tabTitle": "测试3",
+              "tabTitle": "嵌套入口",
               "childItem": [
                 {
-                  "templateId": "BlockImg",
+                  "templateId": "ContainerFlexBox",
                   "prop": {
-                    "dataKeyChain": "flexTestData,N",
-                    "styleOptions":{}
+                    "flexOptions":[
+                      {
+                        "rowName": "第一行",
+                        "rowProp":{
+                          "type": "flex",
+                          "justify": "space-around"
+                        },
+                        "colProp": {},
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "天猫",
+                              "dataKeyChain": "flexTestData,A",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "聚划算",
+                              "dataKeyChain": "flexTestData,B",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "天猫国际",
+                              "dataKeyChain": "flexTestData,C",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "外卖",
+                              "dataKeyChain": "flexTestData,D",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "天猫超市",
+                              "dataKeyChain": "flexTestData,E",
+                              "styleOptions": {}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "rowName": "第二行",
+                        "rowProp":{
+                          "type": "flex",
+                          "justify": "space-around"
+                        },
+                        "colProp": {},
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "充值中心",
+                              "dataKeyChain": "flexTestData,E",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "飞猪旅行",
+                              "dataKeyChain": "flexTestData,C",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "领金币",
+                              "dataKeyChain": "flexTestData,D",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "拍卖",
+                              "dataKeyChain": "flexTestData,B",
+                              "styleOptions": {}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "text": "分类",
+                              "dataKeyChain": "flexTestData,A",
+                              "styleOptions": {}
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "styleOptions":{
+                      "marginBottom": "10px",
+                      "padding": "5px 0 10px",
+                    }
                   }
-                },
+                }
               ],
               "styleOptions":{}
             },
             {
-              "tabTitle": "测试4",
+              "tabTitle": "嵌套容器",
               "childItem": [
                 {
-                  "templateId": "BlockImg",
+                  "templateId": "ContainerFlexBox",
                   "prop": {
-                    "dataKeyChain": "flexTestData,N",
+                    "title": "每日优选",
+                    "subTitle": "日常版の造物节",
+                    "flexOptions": [
+                      {
+                        "rowName": "第一行",
+                        "rowProp":{
+                          "gutter": 2,
+                          "type": "flex",
+                          "align":"center",
+                          "justify": "center"
+                        },
+                        "colProp": {
+                          "0":{
+                            "span": 16
+                          },
+                          "1":{
+                            "span": 8
+                          }
+                        },
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,H",
+                              "styleOptions": {
+                                "maxHeight": "116px"
+                              }
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,F",
+                              "styleOptions": {
+                                "maxHeight": "116px"
+                              }
+                            }
+                          }
+                        ],
+                        "styleOptions":{
+                          "paddingBottom":"1px"
+                        }
+                      },
+                      {
+                        "rowName": "第二行",
+                        "rowProp":{
+                          "gutter": 2,
+                          "justify": "space-around"
+                        },
+                        "colProp": {
+                          "0":{
+                            "span": 8
+                          },
+                          "1":{
+                            "span": 8
+                          },
+                          "2":{
+                            "span": 8
+                          }
+                        },
+                        "childItem": [
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,G",
+                              "styleOptions":{}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,J",
+                              "styleOptions":{}
+                            }
+                          },
+                          {
+                            "templateId": "BlockImg",
+                            "prop": {
+                              "dataKeyChain": "flexTestData,I",
+                              "styleOptions":{}
+                            }
+                          }
+                        ],
+                        "styleOptions":{}
+                      }
+                    ],
                     "styleOptions":{}
                   }
-                },
+                }
               ],
               "styleOptions":{}
             },
             {
-              "tabTitle": "测试5",
+              "tabTitle": "嵌套图片",
               "childItem": [
                 {
                   "templateId": "BlockImg",
