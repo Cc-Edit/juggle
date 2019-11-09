@@ -33,7 +33,63 @@
         "T" : "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
         "U" : "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
         "V" : "http://juggle.isjs.cn/mock/demoImg/flexTest22.png"
-      }
+      },
+      "listTestData": [
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        },
+        {
+          "image": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "title": "这里是商品名称",
+          "location": "北京",
+          "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+        }
+      ]
     },
     "pageNum": "0"
   }

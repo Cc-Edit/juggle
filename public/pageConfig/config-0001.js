@@ -474,19 +474,29 @@ var __pageConfig__ = {
           },
           "tabsOptions": [
             {
-              "tabTitle": "测试1",
+              "tabTitle": "热卖单品",
               "childItem": [
                 {
                   "templateId": "ContainerList",
                   "prop": {
                     "listProp":{
                       "loading-text": "加载中...",
-                      "finished-text": "没有更多了",
+                      "finished-text": "",
                       "error-text": "请求失败，刷新页面重新加载",
                       "error.sync": true,
                     },
+                    "dataKeyChain": "listTestData",
                     "styleOptions":{}
-                  }
+                  },
+                  "childItem":[
+                    {
+                      "templateId": "BlockImg",
+                      "prop": {
+                        "dataKeyChain": "image",
+                        "styleOptions":{}
+                      }
+                    }
+                  ]
                 }
               ],
               "styleOptions":{}

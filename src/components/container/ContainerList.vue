@@ -6,7 +6,7 @@
                      :key="cind"
                      :is="child.templateId"
                      :prop="child.prop"
-                     :baseData="baseData"
+                     :baseData="listItem"
                      :childItem="child.childItem"></component>
         </div>
     </van-list>
@@ -42,28 +42,74 @@
     data() {
       let {
         styleOptions = {},
-        listProp = {}
+        dataSource = null,
+        listProp = {},
+        dataKeyChain = ''
       } = this.prop;
 
       return {
         loading: false,
         finished: false,
+        pageNum: 1,
+        pageSize: 10,
+        dataSource,
+        dataKeyChain,
         styleOptions,
         listProp,
+        listData: []
       }
     },
-    computed: {
-      listData(){
-        return []
+    computed: {},
+    watch: {
+      baseData(){
+        if(this.$isNullOrEmpty(this.dataSource) && !this.$isNullOrEmpty(this.dataKeyChain)) {
+          //不配置dataSource时直接使用传入的baseData
+          this.loading = false;
+          this.finished = true;
+          this.$set(this.listProp, 'finished-text', '');
+          this.$nextTick(() => {
+            this.listData = this.$getChainData(this.baseData, this.dataKeyChain)
+          });
+        }
       }
     },
-    watch: {},
-    created() {},
+    created() {
+      if(!this.$isNullOrEmpty(this.dataSource)){
+        let query = {
+          pageNum: 1,
+          pageSize: 10
+        };
+        this.getListDta(query);
+      }else if(!this.$isNullOrEmpty(this.dataKeyChain)){
+        //不配置dataSource时直接使用传入的baseData
+        this.loading = false;
+        this.finished = true;
+        this.$set(this.listProp, 'finished-text', '');
+        this.$nextTick(() => {
+          this.listData = this.$getChainData(this.baseData, this.dataKeyChain)
+        });
+      }else{
+        this.loading = false;
+        this.finished = true;
+        this.$set(this.listProp, 'finished-text', '配置异常....');
+      }
+    },
     mounted() {},
     destroyed() {},
     methods: {
+      getListDta(){
+        const {origin} = this.dataSource;
+        if(this.$isNullOrEmpty(origin)){
+          this.loading = false;
+          this.finished = true;
+          this.$set(this.listProp, 'finished-text', '配置异常...');
+          return
+        }
+        // const {originUrl, originMethod, dataKeyChain} = origin;
+        // let params = {params: Object.assign({},query, _query)};
+      },
       onLoad(){
-
+        console.log(11111)
       }
     }
   };
