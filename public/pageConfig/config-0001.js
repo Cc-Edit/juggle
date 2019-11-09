@@ -539,6 +539,76 @@ var __pageConfig__ = {
               "styleOptions":{}
             },
             {
+              "tabTitle": "嵌套Tab",
+              "childItem": [
+                {
+                  "templateId": "ContainerTab",
+                  "prop": {
+                    "defaultActive": 0,
+                    "tabsProp":{
+                      "background": "#fff",
+                      "line-height": "2px",
+                      "animated": true,
+                      "border": true,
+                      "sticky": false,
+                      "swipeable": true
+                    },
+                    "tabsOptions": [
+                      {
+                        "tabTitle": "测试1",
+                        "childItem": [
+                          {
+                            "templateId": "ContainerTab",
+                            "prop": {
+                              "defaultActive": 0,
+                              "tabsProp":{
+                                "background": "#fff",
+                                "line-height": "2px",
+                                "animated": true,
+                                "border": true,
+                                "sticky": false,
+                                "swipeable": true
+                              },
+                              "tabsOptions": [
+                                {
+                                  "tabTitle": "测试1.1",
+                                  "childItem": [],
+                                  "styleOptions":{}
+                                },
+                                {
+                                  "tabTitle": "测试1.2",
+                                  "childItem": [],
+                                  "styleOptions":{}
+                                }
+                              ],
+                              "styleOptions":{
+                                "marginTop": "10px"
+                              }
+                            }
+                          }
+                        ],
+                        "styleOptions":{}
+                      },
+                      {
+                        "tabTitle": "测试2",
+                        "childItem": [],
+                        "styleOptions":{}
+                      },
+                      {
+                        "tabTitle": "测试3",
+                        "childItem": [],
+                        "styleOptions":{}
+                      },
+                    ],
+                    "styleOptions":{
+                      "marginTop": "10px"
+                    }
+                  }
+                }
+              ],
+              "styleOptions":{}
+            },
+            {
               "tabTitle": "嵌套入口",
               "childItem": [
                 {
