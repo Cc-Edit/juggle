@@ -7,12 +7,14 @@ import { Lazyload } from 'vant';
 
 import BlockImg from "@/components/block/BlockImg.vue";
 import BlockSwiper from "@/components/block/BlockSwiper.vue";
+import BlockImgCard from "@/components/block/BlockImgCard.vue";
 import ContainerFlexBox from "@/components/container/ContainerFlexBox.vue";
 import ContainerTab from "@/components/container/ContainerTab.vue";
 import ContainerList from "@/components/container/ContainerList.vue";
 
 const components = {
   BlockImg,
+  BlockImgCard,
   BlockSwiper,
   ContainerFlexBox,
   ContainerTab,

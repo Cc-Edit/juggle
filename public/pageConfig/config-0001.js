@@ -490,9 +490,9 @@ var __pageConfig__ = {
                   },
                   "childItem":[
                     {
-                      "templateId": "BlockImg",
+                      "templateId": "BlockImgCard",
                       "prop": {
-                        "dataKeyChain": "image",
+                        "dataKeyChain": "",
                         "styleOptions":{}
                       }
                     }
