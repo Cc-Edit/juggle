@@ -4,11 +4,7 @@ var __pageConfig__ = {
   "author": "文强",
   "PM": "文强",
   "createData": "20191109",
-  "bodyStyle":{
-    width: '100%',
-    minHeight: '100%',
-    backgroundColor: '#f4f4f4'
-  },
+  "bodyStyle":{},
   "pageConfig": {
     "dataSource":{
       "query": {
@@ -52,7 +48,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫",
                     "dataKeyChain": "flexTestData,A",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -60,7 +56,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "聚划算",
                     "dataKeyChain": "flexTestData,B",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -68,7 +64,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫国际",
                     "dataKeyChain": "flexTestData,C",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -76,7 +72,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "外卖",
                     "dataKeyChain": "flexTestData,D",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -84,7 +80,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫超市",
                     "dataKeyChain": "flexTestData,E",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 }
               ]
@@ -102,7 +98,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "充值中心",
                     "dataKeyChain": "flexTestData,E",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -110,7 +106,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "飞猪旅行",
                     "dataKeyChain": "flexTestData,C",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -118,7 +114,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "领金币",
                     "dataKeyChain": "flexTestData,D",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -126,7 +122,7 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "拍卖",
                     "dataKeyChain": "flexTestData,B",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 },
                 {
@@ -134,21 +130,16 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "分类",
                     "dataKeyChain": "flexTestData,A",
-                    "styleOptions": "sm-img"
+                    "styleOptions": {}
                   }
                 }
               ]
             }
           ],
           "styleOptions":{
-            "width": "100%",
-            "background-image": "url(http://juggle.isjs.cn/mock/demoImg/bg1.png)",
-            "background-repeat": "no-repeat",
-            "background-position": "center center",
-            "background-size": "contain",
-            "position": "relative",
-            "top": "-10px",
-            "paddingTop": "10px"
+            "marginBottom": "10px",
+            "padding": "5px 0 10px",
+            "backgroundColor": "#fff"
           }
         }
       },
@@ -162,7 +153,9 @@ var __pageConfig__ = {
               "rowName": "第一行",
               "rowProp":{
                 "gutter": 2,
-                "justify": "space-around"
+                "type": "flex",
+                "align":"center",
+                "justify": "center"
               },
               "colProp": {
                 "0":{
@@ -177,14 +170,18 @@ var __pageConfig__ = {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,H",
-                    "styleOptions": "col-item"
+                    "styleOptions": {
+                      "maxHeight": "116px"
+                    }
                   }
                 },
                 {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,F",
-                    "styleOptions": "col-item"
+                    "styleOptions": {
+                      "maxHeight": "116px"
+                    }
                   }
                 }
               ],
@@ -214,33 +211,28 @@ var __pageConfig__ = {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,G",
-                    "styleOptions": "col-item"
+                    "styleOptions":{}
                   }
                 },
                 {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,J",
-                    "styleOptions": "col-item"
+                    "styleOptions":{}
                   }
                 },
                 {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,I",
-                    "styleOptions": "col-item"
+                    "styleOptions":{}
                   }
                 }
               ],
-              "styleOptions":{
-                "paddingBottom":"1px"
-              }
+              "styleOptions":{}
             }
           ],
-          "styleOptions":{
-            "width": "100%",
-            "backgroundColor": "#fff"
-          }
+          "styleOptions":{}
         }
       },
       {
@@ -268,7 +260,9 @@ var __pageConfig__ = {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,J",
-                    "styleOptions": "col-item"
+                    "styleOptions":{
+                      "maxHeight": "116px"
+                    }
                   }
                 },
                 {
@@ -312,7 +306,9 @@ var __pageConfig__ = {
                   "templateId": "BlockImg",
                   "prop": {
                     "dataKeyChain": "flexTestData,S",
-                    "styleOptions": "col-item-2"
+                    "styleOptions":{
+                      "maxHeight": "125px"
+                    }
                   }
                 },
                 {
@@ -344,28 +340,36 @@ var __pageConfig__ = {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,L",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,N",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,Q",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,O",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           }
                         ],
@@ -399,28 +403,36 @@ var __pageConfig__ = {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,Q",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,O",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,N",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           },
                           {
                             "templateId": "BlockImg",
                             "prop": {
                               "dataKeyChain": "flexTestData,L",
-                              "styleOptions": "col-item-6"
+                              "styleOptions":{
+                                "maxHeight": "60px"
+                              }
                             }
                           }
                         ],

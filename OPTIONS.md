@@ -57,7 +57,7 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
     "prop": {
         "text": "天猫", //底部文字
         "dataKeyChain": "flexTestData,A",    //关联接口数据的key，逗号分割，必填
-        "styleOptions": {}  //底部文字样式
+        "styleOptions": {} //自定义容器样式
     }
 }
 ```
@@ -86,7 +86,6 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
             "prop": {
               "text": "天猫",
               "dataKeyChain": "flexTestData,A",
-              "styleOptions": "sm-img"
             }
           }
         ]

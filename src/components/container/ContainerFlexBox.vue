@@ -71,7 +71,6 @@
   .container-flex{
     .van-row{
       background-color: #fff;
-      padding-bottom: 10px;
     }
     h4{
       display: inline-block;
