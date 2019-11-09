@@ -505,12 +505,36 @@ var __pageConfig__ = {
               "tabTitle": "异步数据",
               "childItem": [
                 {
-                  "templateId": "BlockImg",
+                  "templateId": "ContainerList",
                   "prop": {
-                    "dataKeyChain": "flexTestData,N",
+                    "listProp":{
+                      "loading-text": "加载中...",
+                      "finished-text": "",
+                      "error-text": "请求失败，刷新页面重新加载",
+                      "error.sync": true,
+                    },
+                    "dataSource":{
+                      "query": {
+                        "publishStatus":"3"
+                      },
+                      "origin": {
+                        "originUrl": "/mock/0002.json",
+                        "originMethod": "get",
+                        "dataKeyChain": "listTestData"
+                      }
+                    },
                     "styleOptions":{}
-                  }
-                },
+                  },
+                  "childItem":[
+                    {
+                      "templateId": "BlockImgCard",
+                      "prop": {
+                        "dataKeyChain": "",
+                        "styleOptions":{}
+                      }
+                    }
+                  ]
+                }
               ],
               "styleOptions":{}
             },

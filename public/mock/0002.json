@@ -1,0 +1,74 @@
+{
+  "status": 200,
+  "isSuccessful": true,
+  "code": 100,
+  "data": {
+    "listTestData": [
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+        "num": "4",
+        "price": "100.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
+        "num": "2",
+        "price": "98.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+        "num": "5",
+        "price": "8.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
+        "num": "50",
+        "price": "88.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
+        "num": "4",
+        "price": "100.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
+        "num": "2",
+        "price": "98.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+        "num": "5",
+        "price": "8.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      },
+      {
+        "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest18.png",
+        "num": "50",
+        "price": "88.00",
+        "title": "这里是商品名称",
+        "tags": ["北京", "有货"],
+        "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+      }
+    ],
+    "pageNum": "0"
+  }
+}

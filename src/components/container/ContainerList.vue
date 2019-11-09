@@ -85,9 +85,7 @@
         this.loading = false;
         this.finished = true;
         this.$set(this.listProp, 'finished-text', '');
-        this.$nextTick(() => {
-          this.listData = this.$getChainData(this.baseData, this.dataKeyChain)
-        });
+        this.listData = this.$getChainData(this.baseData, this.dataKeyChain)
       }else{
         this.loading = false;
         this.finished = true;
@@ -97,19 +95,28 @@
     mounted() {},
     destroyed() {},
     methods: {
-      getListDta(){
-        const {origin} = this.dataSource;
+      getListDta(_query){
+        const {query, origin} = this.dataSource;
         if(this.$isNullOrEmpty(origin)){
           this.loading = false;
           this.finished = true;
           this.$set(this.listProp, 'finished-text', '配置异常...');
           return
         }
-        // const {originUrl, originMethod, dataKeyChain} = origin;
-        // let params = {params: Object.assign({},query, _query)};
+        const {originUrl, originMethod, dataKeyChain} = origin;
+        let params = {params: Object.assign({},query, _query)};
+        return this.$send({
+          url: originUrl,
+          method: originMethod,
+          params
+        }).then(res => {
+          if(res.status === 200){
+            this.baseList = [...this.baseList, ...this.$getChainData(res.data, dataKeyChain)];
+          }
+        })
       },
       onLoad(){
-        console.log(11111)
+       this.getListDta();
       }
     }
   };
