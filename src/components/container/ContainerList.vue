@@ -111,12 +111,16 @@
           params
         }).then(res => {
           if(res.status === 200){
-            this.baseList = [...this.baseList, ...this.$getChainData(res.data, dataKeyChain)];
+            this.listData = [...this.listData, ...this.$getChainData(res.data, dataKeyChain)];
+            this.loading = false;
           }
         })
       },
       onLoad(){
-       this.getListDta();
+        this.loading = true;
+        setTimeout(() => {
+          this.getListDta();
+        }, 1000);
       }
     }
   };
