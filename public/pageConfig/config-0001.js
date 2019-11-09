@@ -477,16 +477,14 @@ var __pageConfig__ = {
               "tabTitle": "测试1",
               "childItem": [
                 {
-                  "templateId": "BlockSwiper",
+                  "templateId": "ContainerList",
                   "prop": {
-                    "swiperProp":{
-                      "autoplay": 3000,
-                      "duration": 2000,
-                      "initial-swipe": 1,
-                      "loop": true,
+                    "listProp":{
+                      "loading-text": "加载中...",
+                      "finished-text": "没有更多了",
+                      "error-text": "请求失败，刷新页面重新加载",
+                      "error.sync": true,
                     },
-                    "swiperType": "img",
-                    "dataKeyChain": "bannerList",
                     "styleOptions":{}
                   }
                 }
