@@ -24,11 +24,12 @@
     components: {},
     name: 'App',
     data() {
-      let {pageConfig = {}, emptyPage = false, bodyStyle = {}} = this.$root.$options.propsData;
+      let {pageConfig = {}, emptyPage = false, bodyStyle = {}, pageTitle} = this.$root.$options.propsData;
       let pageData = {
         emptyText: "页面配置异常",  //列表为空时的提示文案
-        emptyPage: emptyPage,  //是否展示异常页面
-        bodyStyle: bodyStyle,  //是否展示异常页面
+        emptyPage,  //是否展示异常页面
+        bodyStyle,  //是否展示异常页面
+        pageTitle,  //页面标题
         noAuthPage: false,  //无权限页面
         isDrawer: false,  //侧边栏状态
         query: {},    //查询条件
@@ -43,7 +44,13 @@
     created() {
       this.getNewList()
     },
-    mounted() {},
+    mounted() {
+      if(this.emptyPage){
+        document.title = '配置异常';
+      }else{
+        document.title = this.pageTitle;
+      }
+    },
     destroyed() {},
     methods: {
       /**

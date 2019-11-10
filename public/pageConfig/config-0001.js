@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 var __pageConfig__ = {
-  "pageTitle": "测试页面",
+  "pageTitle": "Juggle",
   "author": "文强",
   "PM": "文强",
   "createData": "20191109",
