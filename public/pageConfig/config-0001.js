@@ -859,9 +859,19 @@ var __pageConfig__ = {
         "templateId": "PublicDraw",
         "prop": {
           "drawProp":{
-            "position": "left"
+            "position": "left",
+            "closeable": false,
+            "round": false,
+            "close-icon": 'close',
+            "get-container": "#app"
           },
-          "drawStyle":{},
+          "showButton": true,
+          "successButtonText": "确定",
+          "cancelButtonText": "取消",
+          "drawStyle":{
+            "width": "60%",
+            "height": "100%"
+          },
           "styleOptions":{},
         },
         "childItem": []
