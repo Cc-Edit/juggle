@@ -23,7 +23,7 @@
               <div v-else-if="queryItem.type === 'checkbox'">
                 <van-radio-group v-model="query[queryItem.key]">
                   <van-row justify="space-around">
-                    <van-col :offset="1" :span="queryItem.span" v-for="(subItem, subI) in queryItem.subItem" :key="subI">
+                    <van-col :offset="1" :span="queryItem.span" v-for="(subItem) in queryItem.subItem" :key="subItem.value">
                       <van-radio :name="subItem.value" checked-color="#07c160">{{subItem.name}}</van-radio>
                     </van-col>
                   </van-row>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <!--childen-->
-      <div class="container-draw-childen" v-for="(child, cind) in childItem" :key="cind">
+      <div class="container-draw-childen" v-for="(child) in childItem" :key="child.templateId">
         <component :is="child.templateId"
                    :prop="child.prop"
                    :baseData="baseData"
