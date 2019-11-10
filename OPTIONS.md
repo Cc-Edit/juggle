@@ -62,6 +62,22 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
 }
 ```
 
+#### BlockImgCard
+##### 说明：
+    图文商品块儿
+##### 用途：
+    展示商品信息
+##### 配置项说明：
+```
+{
+  "templateId": "BlockImgCard",
+  "prop": {
+    "dataKeyChain": "",
+    "styleOptions":{}
+  }
+}
+```
+
 #### ContainerFlexBox
 ##### 说明：
     flex布局容器
@@ -97,5 +113,117 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
       "paddingTop": "10px"
     }
   }
+}
+```
+
+#### ContainerTab
+##### 说明：
+    tab布局容器
+##### 用途：
+    标签页切换容器
+##### 配置项说明：
+```
+{
+    "templateId": "ContainerTab",
+    "prop": {
+        "defaultActive": 0,
+        "tabsProp":{      //tabs组件参数
+            "background": "#fff",
+            "line-height": "2px",
+            "animated": true,
+            "border": true,
+            "sticky": true,
+            "swipeable": true
+        },
+        "tabsOptions": [  //选项列表，数组中由几个对象就有几个标签
+            {
+                "tabTitle": "热卖单品",  //tab标题
+                "childItem": [   //tab内容，可以自由组合
+                     {
+                        "templateId": "BlockImg",
+                        "prop": {
+                          "text": "天猫",
+                          "dataKeyChain": "flexTestData,A",
+                        }
+                     }
+                ],
+                "styleOptions":{}
+            },
+            {
+                "tabTitle": "热卖单品",  //tab标题
+                "childItem": [ ],
+                "styleOptions":{}
+            }
+        ],
+        "styleOptions":{
+            "marginTop": "10px"
+        }
+    }
+}
+```
+
+
+#### ContainerList
+##### 说明：
+    list布局容器
+##### 用途：
+    瀑布流列表容器
+##### 配置项说明：
+```
+//直接使用顶级数据，需要配置dataKeyChain
+{
+    "templateId": "ContainerList",
+    "prop": {
+        "listProp":{  //vant list组件prop
+            "loading-text": "加载中...",
+            "finished-text": "",
+            "error-text": "请求失败，刷新页面重新加载",
+            "error.sync": true,
+        },
+        "dataKeyChain": "listTestData",  //数据key
+        "styleOptions":{}
+    },
+    "childItem":[  //子元素模板
+        {
+            "templateId": "BlockImgCard",
+            "prop": {
+                "dataKeyChain": "",
+                "styleOptions":{}
+            }
+        }
+    ]
+}
+
+//独立获取数据，需要配置dataSource
+{
+    "templateId": "ContainerList",
+    "prop": {
+        "listProp":{
+            "loading-text": "加载中...",
+            "finished-text": "",
+            "error-text": "请求失败，刷新页面重新加载",
+            "error.sync": true,
+        },
+        "dataSource":{  //数据源
+            "query": {  //查询参数
+                "publishStatus":"3"
+            },
+            "origin": {  //接口配置
+                "originUrl": "/mock/0002.json",
+                "originMethod": "get",
+                "dataKeyChain": "listTestData"
+            }
+        },
+        "styleOptions":{}
+    },
+    "childItem":[
+        {
+            "templateId": "BlockImgCard",
+            "prop": {
+                "dataKeyChain": "",
+                "styleOptions":{}
+            }
+        }
+    ]
 }
 ```
