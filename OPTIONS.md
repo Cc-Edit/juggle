@@ -250,3 +250,63 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
 },
 ```
 
+#### 全局弹窗
+##### 说明：
+    全局弹窗组件
+##### 用途：
+    支持各个方向的页面弹出窗
+##### 配置项说明：
+```
+{
+    "templateId": "PublicDraw",
+    "prop": {
+        "drawProp":{  //弹窗配置
+            "position": "left",
+            "closeable": false,
+            "round": false,
+            "close-icon": 'close',
+            "close-on-click-overlay": false,
+            "get-container": "#app"
+        },
+        "showButton": true,  //是否展示页面底部按钮
+        "successButtonText": "确定",  //按钮确认文案
+        "cancelButtonText": "取消",   //按钮取消文案
+        "drawStyle":{  //弹出窗口样式
+            "width": "60%",
+            "height": "100%"
+        },
+        "queryOptions":[  //弹窗内选项
+            {
+                "queryType": "select",  //选择器
+                "key": "accountType",  //绑定到查询参数key
+                "name": "账户名称",  //选项name
+                "type": "radio",  //单选
+                "span": "10",  //占位
+                "subItem": [ //选项
+                    { "name": "不限", "value": "-1" },
+                    { "name": "收款", "value": "1" },
+                    { "name": "购车", "value": "2" },
+                    { "name": "日常", "value": "3" }
+                ]
+            }
+        ],
+        "styleOptions":{},
+    },
+    "childItem": [  //也支持组件嵌套
+        {
+            "templateId": "BlockSwiper",
+            "prop": {
+                "swiperProp":{
+                "autoplay": 3000,
+                "duration": 2000,
+                "initial-swipe": 1,
+                "loop": true,
+                },
+                "swiperType": "img",
+                "dataKeyChain": "bannerList",
+                "styleOptions":{}
+            }
+        }
+    ]
+}
+```
