@@ -871,7 +871,8 @@ var __pageConfig__ = {
           "cancelButtonText": "取消",
           "drawStyle":{
             "width": "60%",
-            "height": "100%"
+            "height": "100%",
+            "overflow": "scroll"
           },
           "queryOptions":[
             {
@@ -890,27 +891,27 @@ var __pageConfig__ = {
             {
               "queryType": "select",
               "key": "y_flag",
-              "name": "合规状态",
+              "name": "状态2",
               "type": "radio",
               "span": "22",
               "subItem": [
                 { "name": "全部", "value": "-1" },
-                { "name": "采购流水未解释(2日内)", "value": "6" },
-                { "name": "销售流水未解释(2日内)", "value": "5" }
+                { "name": "111111111(2日内)", "value": "6" },
+                { "name": "222222222(2日内)", "value": "5" }
               ]
             },
             {
               "queryType": "select",
               "key": "ex_funds",
-              "name": "不合规状态",
+              "name": "状态1",
               "type": "checkbox",
               "span": "22",
               "subItem": [
                 { "name": "全部", "value": "-1" },
-                { "name": "采购流水未解释(2日外)", "value": "8" },
-                { "name": "销售流水未解释(2日外)", "value": "7" },
-                { "name": "日常支出未解释", "value": "9" },
-                { "name": "非购车支出", "value": "10" }
+                { "name": "奥术大师多(2日外)", "value": "8" },
+                { "name": "驱蚊器翁(2日外)", "value": "7" },
+                { "name": "维尔给对方", "value": "9" },
+                { "name": "热特点V型", "value": "10" }
               ]
             }
           ],

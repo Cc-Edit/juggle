@@ -5,40 +5,41 @@
         v-bind="drawProp"
         @closed="closeHandle"
         :style="drawStyle">
-      <div class="container-draw-item"
-           v-for="(queryItem, inde) in queryOptions"
-           :key="inde">
-        <b>{{queryItem.name}}</b>
-        <!--选择器-->
-        <div class="container-draw-item-body" v-if="queryItem.queryType === 'select'">
-              <div v-if="queryItem.type === 'radio'">
-                <van-checkbox-group v-model="query[queryItem.key]">
-                  <van-row justify="space-around">
-                    <van-col :offset="1" :span="queryItem.span" v-for="(subItem, subI) in queryItem.subItem" :key="subI">
-                      <van-checkbox :name="subItem.value" checked-color="#07c160">{{subItem.name}}</van-checkbox>
-                    </van-col>
-                  </van-row>
-                </van-checkbox-group>
-              </div>
-              <div v-else-if="queryItem.type === 'checkbox'">
-                <van-radio-group v-model="query[queryItem.key]">
-                  <van-row justify="space-around">
-                    <van-col :offset="1" :span="queryItem.span" v-for="(subItem) in queryItem.subItem" :key="subItem.value">
-                      <van-radio :name="subItem.value" checked-color="#07c160">{{subItem.name}}</van-radio>
-                    </van-col>
-                  </van-row>
-                </van-radio-group>
-              </div>
+      <div class="container-draw-body">
+        <div class="container-draw-item"
+             v-for="(queryItem, inde) in queryOptions"
+             :key="inde">
+          <b>{{queryItem.name}}</b>
+          <!--选择器-->
+          <div class="container-draw-item-body" v-if="queryItem.queryType === 'select'">
+            <div v-if="queryItem.type === 'radio'">
+              <van-checkbox-group v-model="query[queryItem.key]">
+                <van-row justify="space-around">
+                  <van-col :offset="1" :span="queryItem.span" v-for="(subItem, subI) in queryItem.subItem" :key="subI">
+                    <van-checkbox :name="subItem.value" checked-color="#07c160">{{subItem.name}}</van-checkbox>
+                  </van-col>
+                </van-row>
+              </van-checkbox-group>
+            </div>
+            <div v-else-if="queryItem.type === 'checkbox'">
+              <van-radio-group v-model="query[queryItem.key]">
+                <van-row justify="space-around">
+                  <van-col :offset="1" :span="queryItem.span" v-for="(subItem) in queryItem.subItem" :key="subItem.value">
+                    <van-radio :name="subItem.value" checked-color="#07c160">{{subItem.name}}</van-radio>
+                  </van-col>
+                </van-row>
+              </van-radio-group>
+            </div>
+          </div>
+        </div>
+        <!--childen-->
+        <div class="container-draw-childen" v-for="(child) in childItem" :key="child.templateId">
+          <component :is="child.templateId"
+                     :prop="child.prop"
+                     :baseData="baseData"
+                     :childItem="child.childItem"></component>
         </div>
       </div>
-      <!--childen-->
-      <div class="container-draw-childen" v-for="(child) in childItem" :key="child.templateId">
-        <component :is="child.templateId"
-                   :prop="child.prop"
-                   :baseData="baseData"
-                   :childItem="child.childItem"></component>
-      </div>
-
       <div v-if="showButton" class="container-draw-bottom">
         <van-row type="flex" justify="space-between">
           <van-col span="12" v-if="!$isNullOrEmpty(cancelButtonText)">
@@ -133,6 +134,12 @@
   };
 </script>
 <style lang="less">
+  .container-draw-body{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    overflow: scroll;
+  }
   .container-draw-bottom{
     position: absolute;
     bottom: 0;
