@@ -863,6 +863,7 @@ var __pageConfig__ = {
             "closeable": false,
             "round": false,
             "close-icon": 'close',
+            "close-on-click-overlay": false,
             "get-container": "#app"
           },
           "showButton": true,
@@ -872,9 +873,65 @@ var __pageConfig__ = {
             "width": "60%",
             "height": "100%"
           },
+          "queryOptions":[
+            {
+              "queryType": "select",
+              "key": "accountType",
+              "name": "账户名称",
+              "type": "radio",
+              "span": "10",
+              "subItem": [
+                { "name": "不限", "value": "-1" },
+                { "name": "收款", "value": "1" },
+                { "name": "购车", "value": "2" },
+                { "name": "日常", "value": "3" }
+              ]
+            },
+            {
+              "queryType": "select",
+              "key": "y_flag",
+              "name": "合规状态",
+              "type": "radio",
+              "span": "22",
+              "subItem": [
+                { "name": "全部", "value": "-1" },
+                { "name": "采购流水未解释(2日内)", "value": "6" },
+                { "name": "销售流水未解释(2日内)", "value": "5" }
+              ]
+            },
+            {
+              "queryType": "select",
+              "key": "ex_funds",
+              "name": "不合规状态",
+              "type": "checkbox",
+              "span": "22",
+              "subItem": [
+                { "name": "全部", "value": "-1" },
+                { "name": "采购流水未解释(2日外)", "value": "8" },
+                { "name": "销售流水未解释(2日外)", "value": "7" },
+                { "name": "日常支出未解释", "value": "9" },
+                { "name": "非购车支出", "value": "10" }
+              ]
+            }
+          ],
           "styleOptions":{},
         },
-        "childItem": []
+        "childItem": [
+          {
+            "templateId": "BlockSwiper",
+            "prop": {
+              "swiperProp":{
+                "autoplay": 3000,
+                "duration": 2000,
+                "initial-swipe": 1,
+                "loop": true,
+              },
+              "swiperType": "img",
+              "dataKeyChain": "bannerList",
+              "styleOptions":{}
+            }
+          }
+        ]
       }
     ]
   }
