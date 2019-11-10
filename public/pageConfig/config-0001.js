@@ -841,7 +841,20 @@ var __pageConfig__ = {
             "marginTop": "10px"
           }
         }
-      }
+      },
+      {
+        "templateId": "PublicBubble",
+        "prop": {
+          "bubbleProp":{
+            "showText": "弹窗测试"
+          },
+          "dataKeyChain": "flexTestData,A",
+          "styleOptions":{
+            "bottom": "100px",
+            "right": "0"
+          }
+        }
+      },
     ]
   }
 };
