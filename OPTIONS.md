@@ -227,3 +227,26 @@ dataKeyChain 出现在各个组件参数中，用来关联数据的key，举例�
     ]
 }
 ```
+
+#### 全局小提示
+##### 说明：
+    fixed布局小块
+##### 用途：
+    目前仅用作唤起弹窗
+##### 配置项说明：
+```
+{
+    "templateId": "PublicBubble",
+        "prop": {
+            "bubbleProp":{
+                "showText": "弹窗测试"  //底部文案
+            },
+        "dataKeyChain": "flexTestData,A", //图片数据
+        "styleOptions":{
+            "bottom": "100px",
+            "right": "0"
+        }
+    }
+},
+```
+

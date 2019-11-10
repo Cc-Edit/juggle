@@ -855,6 +855,17 @@ var __pageConfig__ = {
           }
         }
       },
+      {
+        "templateId": "PublicDraw",
+        "prop": {
+          "drawProp":{
+            "position": "left"
+          },
+          "drawStyle":{},
+          "styleOptions":{},
+        },
+        "childItem": []
+      }
     ]
   }
 };

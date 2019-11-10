@@ -12,6 +12,7 @@ import ContainerFlexBox from "@/components/container/ContainerFlexBox.vue";
 import ContainerTab from "@/components/container/ContainerTab.vue";
 import ContainerList from "@/components/container/ContainerList.vue";
 import PublicBubble from "@/components/public/PublicBubble.vue";
+import PublicDraw from "@/components/public/PublicDraw.vue";
 
 const components = {
   BlockImg,
@@ -21,6 +22,7 @@ const components = {
   ContainerTab,
   ContainerList,
   PublicBubble,
+  PublicDraw
 };
 
 Vue.mixin({

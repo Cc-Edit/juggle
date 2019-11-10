@@ -1,5 +1,5 @@
 <template>
-  <div class="public-bubble" :style="styleOptions">
+  <div class="public-bubble" :style="styleOptions" @click.prevent="bubbleHandle">
     <img v-lazy="$getChainData(baseData, dataKeyChain)" >
     <span v-if="!$isNullOrEmpty(bubbleProp.showText)">{{bubbleProp.showText}}</span>
   </div>
@@ -42,7 +42,11 @@
     created() {},
     mounted() {},
     destroyed() {},
-    methods: {}
+    methods: {
+      bubbleHandle(){
+        this.$store.commit('switchPublicDraw');
+      }
+    }
   };
 </script>
 <style lang="less">

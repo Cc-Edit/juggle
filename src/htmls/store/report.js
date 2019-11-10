@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     //状态
+    shopPublicDraw: false,
     queryChangeCount: 0,
     status: '',
     length: 0,
@@ -16,6 +17,9 @@ export default new Vuex.Store({
       state.queryChangeCount ++;
       state.status = obj.status;
       state.length = obj.length;
+    },
+    switchPublicDraw(state){
+      state.shopPublicDraw = !state.shopPublicDraw;
     }
   },
   actions: {
