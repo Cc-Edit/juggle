@@ -45,6 +45,42 @@ const Util = {
     return script;
   },
   /**
+   * 格式化金额
+   * @params: num  要格式化的字符串
+   * @params: separator  分隔标记
+   * @author: wenqiang
+   * */
+  $formatMoney(num, separator = ",") {
+    if (isNaN(Number(num))) {
+      return num;
+    }
+    var x,
+      x1,
+      x2,
+      x3,
+      i,
+      len,
+      tag = '',
+      decimal = ".";
+    if((num+'').indexOf('-') > -1){
+      tag = '-'
+    }
+    num = Math.abs(parseFloat(num)).toFixed(2);
+    num += "";
+    x = num.split(".");
+    x1 = x[0];
+    x2 = x.length > 1 ? decimal + x[1] : "";
+    x3 = "";
+    for (i = 0, len = x1.length; i < len; ++i) {
+      if (i !== 0 && i % 3 === 0) {
+        x3 = separator + x3;
+      }
+      x3 = x1[len - i - 1] + x3;
+    }
+    x1 = x3;
+    return tag + x1 + x2;
+  },
+  /**
    *  获取Url参数
    * */
   $urlParse() {
