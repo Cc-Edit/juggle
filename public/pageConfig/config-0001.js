@@ -11,7 +11,7 @@ var __pageConfig__ = {
         "publishStatus":"3"
       },
       "origin": {
-        "originUrl": "/mock/0001.json",
+        "originUrl": "http://juggle.isjs.cn/mock/0001.json",
         "originMethod": "get",
         "dataKeyChain": "content"
       }
@@ -518,7 +518,7 @@ var __pageConfig__ = {
                         "publishStatus":"3"
                       },
                       "origin": {
-                        "originUrl": "/mock/0002.json",
+                        "originUrl": "http://juggle.isjs.cn/mock/0002.json",
                         "originMethod": "get",
                         "dataKeyChain": "listTestData"
                       }
