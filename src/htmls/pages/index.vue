@@ -50,7 +50,10 @@
         </Sider>
         <Layout :style="{padding: '10px 10px 0'}">
           <Content :style="{padding: '24px',margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
-            Content
+            <div class="serve-overview">
+
+            </div>
+
           </Content>
         </Layout>
       </Layout>
@@ -113,5 +116,12 @@
     margin: 0 auto;
     margin-right: 20px;
     float: right;
+  }
+  .serve-overview{
+    width: 400px;
+    height: 700px;
+    background-image: url('~@/assets/images/iphone-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 </style>
