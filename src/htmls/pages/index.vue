@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="serve-layout">
     <Layout>
-      <Header  :style="{position: 'fixed', width: '100%'}">
+      <Header  :style="{position: 'fixed', width: '100%', zIndex: 99}">
         <Menu mode="horizontal" theme="dark" :active-name="activeName">
           <div class="serve-layout-logo">
             Juggle
@@ -101,12 +101,5 @@
     margin-right: 20px;
     float: right;
   }
-  .serve-overview{
-    display: inline-block;
-    padding: 108px 67px 121px 80px;
-    background-image: url('~@/assets/images/iphone-bg.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    box-sizing: content-box;
-  }
+
 </style>

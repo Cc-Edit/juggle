@@ -34,7 +34,7 @@ Vue.use(Lazyload, {});
 Vue.config.productionTip = false;
 
 const { $getJsFile, $urlParse, $isDev } = Vue.prototype;
-const pageCode = $urlParse().pageCode || '0001'; //页面编码
+const pageCode = $urlParse().pageCode || ''; //页面编码
 
 //页面配置文件地址
 let configUrl = ($isDev ? `/pageConfig/config-local-${pageCode}.js` : `pageConfig/config-${pageCode}.js`);
