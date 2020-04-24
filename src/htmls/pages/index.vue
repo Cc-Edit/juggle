@@ -2,24 +2,24 @@
   <div id="app" class="serve-layout">
     <Layout>
       <Header  :style="{position: 'fixed', width: '100%'}">
-        <Menu mode="horizontal" theme="dark" active-name="1">
+        <Menu mode="horizontal" theme="dark" :active-name="activeName">
           <div class="serve-layout-logo">
             Juggle
           </div>
           <div class="serve-layout-nav">
-            <MenuItem name="1">
+            <MenuItem name="develop" to="/develop">
               <Icon type="ios-navigate"></Icon>
               开发
             </MenuItem>
-            <MenuItem name="1">
+            <MenuItem name="review" to="/review">
               <Icon type="ios-navigate"></Icon>
               预览
             </MenuItem>
-            <MenuItem name="1">
+            <MenuItem name="build" to="/build">
               <Icon type="ios-navigate"></Icon>
               打包
             </MenuItem>
-            <MenuItem name="1">
+            <MenuItem name="user" to="/user">
               <Icon type="ios-navigate"></Icon>
               个人中心
             </MenuItem>
@@ -47,7 +47,9 @@
   export default {
     name: 'App',
     data() {
-      return {}
+      return {
+        activeName:'user'
+      }
     },
     //使用watch 监听$router的变化
     //如果to索引大于from索引,判断为前进状态,反之则为后退状态
