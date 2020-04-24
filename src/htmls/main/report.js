@@ -37,7 +37,7 @@ const { $getJsFile, $urlParse, $isDev } = Vue.prototype;
 const pageCode = $urlParse().pageCode || '0001'; //页面编码
 
 //页面配置文件地址
-let configUrl = ($isDev ? `/pageConfig/config-${pageCode}.js` : `pageConfig/config-${pageCode}.js`);
+let configUrl = ($isDev ? `/pageConfig/config-local-${pageCode}.js` : `pageConfig/config-${pageCode}.js`);
 
 $getJsFile(`${configUrl}`,() => {
   let pageData =  window.__pageConfig__ || { emptyPage: true, pageConfig: {} };
