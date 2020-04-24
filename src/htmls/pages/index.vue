@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="serve-layout">
     <Layout>
-      <Header>
+      <Header  :style="{position: 'fixed', width: '100%'}">
         <Menu mode="horizontal" theme="dark" active-name="1">
           <div class="serve-layout-logo">
             Juggle
@@ -9,7 +9,19 @@
           <div class="serve-layout-nav">
             <MenuItem name="1">
               <Icon type="ios-navigate"></Icon>
-              控制台
+              开发
+            </MenuItem>
+            <MenuItem name="1">
+              <Icon type="ios-navigate"></Icon>
+              预览
+            </MenuItem>
+            <MenuItem name="1">
+              <Icon type="ios-navigate"></Icon>
+              打包
+            </MenuItem>
+            <MenuItem name="1">
+              <Icon type="ios-navigate"></Icon>
+              个人中心
             </MenuItem>
             <MenuItem name="2">
               <Icon type="md-power" />
@@ -19,41 +31,11 @@
         </Menu>
       </Header>
       <Layout>
-        <Sider hide-trigger :style="{background: '#fff'}">
-          <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
-            <Submenu name="1">
-              <template slot="title">
-                <Icon type="ios-navigate"></Icon>
-                容器组件
-              </template>
-              <MenuItem name="1-1">Option 1</MenuItem>
-              <MenuItem name="1-2">Option 2</MenuItem>
-              <MenuItem name="1-3">Option 3</MenuItem>
-            </Submenu>
-            <Submenu name="2">
-              <template slot="title">
-                <Icon type="ios-keypad"></Icon>
-                键值对组件
-              </template>
-              <MenuItem name="2-1">Option 1</MenuItem>
-              <MenuItem name="2-2">Option 2</MenuItem>
-            </Submenu>
-            <Submenu name="3">
-              <template slot="title">
-                <Icon type="ios-analytics"></Icon>
-                公共组件
-              </template>
-              <MenuItem name="3-1">Option 1</MenuItem>
-              <MenuItem name="3-2">Option 2</MenuItem>
-            </Submenu>
-          </Menu>
-        </Sider>
-        <Layout :style="{padding: '10px 10px 0'}">
-          <Content :style="{padding: '24px',margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
+        <Layout :style="{marginTop: '60px',padding: '10px 10px 0'}">
+          <Content :style="{margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
             <div class="serve-overview">
-
+              <iframe src="/report.html?pageCode=0001"  frameborder="0" width="375px" height="667px" ></iframe>
             </div>
-
           </Content>
         </Layout>
       </Layout>
@@ -97,7 +79,6 @@
     background: #f5f7f9;
     position: relative;
     border-radius: 4px;
-    overflow: hidden;
   }
   .serve-layout-logo{
     width: 100px;
@@ -118,10 +99,11 @@
     float: right;
   }
   .serve-overview{
-    width: 400px;
-    height: 700px;
+    display: inline-block;
+    padding: 108px 67px 121px 80px;
     background-image: url('~@/assets/images/iphone-bg.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    box-sizing: content-box;
   }
 </style>
