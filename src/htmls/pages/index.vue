@@ -1,31 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/about/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <transition :name="transitionName">
-      <router-view/>
-    </transition>
+
   </div>
 </template>
 <script>
   export default {
     name: 'App',
     data() {
-      return {
-        transitionName: ''
-      }
+      return {}
     },
     //使用watch 监听$router的变化
     //如果to索引大于from索引,判断为前进状态,反之则为后退状态
-    watch: {
-      $route(to, from) {
-        const toDepth = to.path.split('/').length;
-        const fromDepth = from.path.split('/').length;
-        this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-      }
-    }
+    watch: {}
   }
 </script>
 <style lang="less">
