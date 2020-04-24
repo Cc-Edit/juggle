@@ -31,9 +31,13 @@
         </Menu>
       </Header>
       <Layout>
-        <transition name="fade" mode="in-out">
-          <router-view/>
-        </transition>
+        <Layout :style="{marginTop: '60px',padding: '10px 10px 0'}">
+          <Content :style="{margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
+            <transition name="fade" mode="out-in">
+              <router-view/>
+            </transition>
+          </Content>
+        </Layout>
       </Layout>
       <Footer class="layout-footer-center">2019-2020 &copy; www.isjs.cn</Footer>
     </Layout>

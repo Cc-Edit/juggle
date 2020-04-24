@@ -4,7 +4,7 @@ import ViewUI from 'view-design';
 Vue.use(ViewUI);
 Vue.use(VueRouter);
 ViewUI.LoadingBar.config({
-  color: '#ecca4f',
+  color: '#09ea2e',
   failedColor: '#fa773b',
   height: 2
 });

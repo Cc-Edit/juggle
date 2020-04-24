@@ -1,6 +1,6 @@
 <template>
-  <div >
-    用户中心
+  <div>
+   用户中心，实现导出，管理等功能
   </div>
 </template>
 
