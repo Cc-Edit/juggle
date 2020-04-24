@@ -31,13 +31,9 @@
         </Menu>
       </Header>
       <Layout>
-        <Layout :style="{marginTop: '60px',padding: '10px 10px 0'}">
-          <Content :style="{margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
-            <div class="serve-overview">
-              <iframe src="/report.html?pageCode=0001"  frameborder="0" width="375px" height="667px" ></iframe>
-            </div>
-          </Content>
-        </Layout>
+        <transition name="fade" mode="in-out">
+          <router-view/>
+        </transition>
       </Layout>
       <Footer class="layout-footer-center">2019-2020 &copy; www.isjs.cn</Footer>
     </Layout>
@@ -48,12 +44,13 @@
     name: 'App',
     data() {
       return {
-        activeName:'user'
+        activeName:'develop'
       }
     },
     //使用watch 监听$router的变化
     //如果to索引大于from索引,判断为前进状态,反之则为后退状态
-    watch: {}
+    watch: {
+    }
   }
 </script>
 <style lang="less">
