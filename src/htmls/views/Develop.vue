@@ -81,16 +81,16 @@
           </Card>
           <div>
             <Divider orientation="left">提示：</Divider>
-            <p style="text-align: left">数据会自动保存，操作过程中请勿刷新页面</p>
+            <p style="text-align: left;font-size: 14px">数据会自动保存，操作过程中请勿刷新页面</p>
           </div>
         </TabPane>
         <TabPane label="页面搭建" name="pageBody" icon="ios-expand">
           <div class="serve-components">
-            <Card style="width: 100%; height: 667px">
+            <Card style="width: 100%; height: 707px">
               <p slot="title">组件列表</p>
               <div>
                 <Tabs type="card" name="child" >
-                  <TabPane tab="child" label="容器组件">
+                  <TabPane class="serve-list-group-booy" tab="child" label="容器组件">
                     <span v-if="ComponentsObj.publicCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.publicCom"
@@ -109,7 +109,7 @@
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane tab="child"  label="内容组件">
+                  <TabPane class="serve-list-group-booy"  tab="child"  label="内容组件">
                     <span v-if="ComponentsObj.container.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.container"
@@ -128,7 +128,7 @@
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane tab="child"  label="公共组件">
+                  <TabPane class="serve-list-group-booy"  tab="child"  label="公共组件">
                     <span v-if="ComponentsObj.blockCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.blockCom"
@@ -147,7 +147,7 @@
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane tab="child"  label="表单组件">
+                  <TabPane class="serve-list-group-booy"  tab="child"  label="表单组件">
                     <span v-if="ComponentsObj.formCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.formCom"
@@ -166,7 +166,7 @@
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane tab="child"  label="操作组件">
+                  <TabPane class="serve-list-group-booy"  tab="child"  label="操作组件">
                     <span v-if="ComponentsObj.actionCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.actionCom"
@@ -190,7 +190,7 @@
             </Card>
           </div>
           <div class="serve-pageBock">
-            <Card style="width: 100%; height: 667px">
+            <Card style="width: 100%; height: 707px">
               <p slot="title">页面结构</p>
               <div>
                 <span v-if="bodyConfig.length === 0" class="serve-empty">将组件拖拽到此列表进行搭建</span>
@@ -212,7 +212,7 @@
             </Card>
           </div>
           <div class="serve-detail">
-            <Card style="width: 100%; height: 667px">
+            <Card style="width: 100%; height: 707px">
               <p slot="title">详细设置</p>
               <div>
 
@@ -439,10 +439,10 @@
     position: relative;
     display: block;
     padding: 10px 20px;
-    margin-bottom: -1px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(172,172,172,0.1);
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5px;
+    margin-bottom: 10px;
     .serve-list-group-item-title{
       font-size: 15px;
       font-weight: bold;
@@ -462,7 +462,7 @@
   }
   .serve-pageBock{
     width: 375px;
-    height: 667px;
+    height: 707px;
     float: left;
     display: inline-block;
     overflow: scroll;
@@ -470,14 +470,14 @@
   }
   .serve-detail{
     width: 500px;
-    height: 667px;
+    height: 707px;
     float: left;
     display: inline-block;
     overflow: scroll;
   }
   .serve-components{
     width: 400px;
-    height: 667px;
+    height: 707px;
     display: inline-block;
     float: left;
     margin-right: 20px;
@@ -494,5 +494,9 @@
     top: 150px;
     left: 0;
     right: 0;
+  }
+  .serve-list-group-booy{
+    height: 585px;
+    overflow: scroll;
   }
 </style>
