@@ -91,32 +91,32 @@
               <div>
                 <Tabs type="card" name="child" >
                   <TabPane class="serve-list-group-booy" tab="child" label="容器组件">
-                    <span v-if="ComponentsObj.publicCom.length === 0" class="serve-empty">暂无数据</span>
-                    <draggable class="serve-list-group"
-                               v-model="ComponentsObj.publicCom"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                            v-for="(element, index) in ComponentsObj.publicCom"
-                            :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="[]"></component>
-                        </div>
-                      </transition-group>
-                    </draggable>
-                  </TabPane>
-                  <TabPane class="serve-list-group-booy"  tab="child"  label="内容组件">
                     <span v-if="ComponentsObj.container.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.container"
                                v-bind="dragOptions">
                       <transition-group type="transition" >
                         <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.container"
+                            v-for="(element, index) in ComponentsObj.container"
+                            :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="element.childItem || []"></component>
+                        </div>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
+                  <TabPane class="serve-list-group-booy"  tab="child"  label="内容组件">
+                    <span v-if="ComponentsObj.blockCom.length === 0" class="serve-empty">暂无数据</span>
+                    <draggable class="serve-list-group"
+                               v-model="ComponentsObj.blockCom"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
+                             v-for="(element, index) in ComponentsObj.blockCom"
                              :key="index+'**'">
                           <h4 class="serve-list-group-item-title">{{element.name}}</h4>
                           <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
@@ -129,13 +129,13 @@
                     </draggable>
                   </TabPane>
                   <TabPane class="serve-list-group-booy"  tab="child"  label="公共组件">
-                    <span v-if="ComponentsObj.blockCom.length === 0" class="serve-empty">暂无数据</span>
+                    <span v-if="ComponentsObj.publicCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
-                               v-model="ComponentsObj.blockCom"
+                               v-model="ComponentsObj.publicCom"
                                v-bind="dragOptions">
                       <transition-group type="transition" >
                         <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.blockCom"
+                             v-for="(element, index) in ComponentsObj.publicCom"
                              :key="index+'**'">
                           <h4 class="serve-list-group-item-title">{{element.name}}</h4>
                           <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
