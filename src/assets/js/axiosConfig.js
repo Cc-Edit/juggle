@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
   headers: {
     // "Content-Type": "application/json",
     'Content-Type': 'application/x-www-form-urlencoded',
-    "uid": '123123',
+    // "uid": '123123',
   },
   timeout: 30000 // 请求超时时间
 });

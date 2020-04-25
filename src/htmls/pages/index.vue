@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="serve-layout">
     <Layout>
-      <Header  :style="{position: 'fixed', width: '100%', zIndex: 99}">
+      <Header  :style="{ width: '100%', zIndex: 99}">
         <Menu mode="horizontal" theme="dark" :active-name="activeName">
           <div class="serve-layout-logo">
             Juggle
@@ -9,15 +9,19 @@
           <div class="serve-layout-nav">
             <MenuItem name="develop" to="/develop">
               <Icon type="ios-navigate"></Icon>
-              开发
+              开发界面
+            </MenuItem>
+            <MenuItem name="develop" to="/backend">
+              <Icon type="ios-navigate"></Icon>
+              数据源配置
             </MenuItem>
             <MenuItem name="review" to="/review">
               <Icon type="ios-navigate"></Icon>
-              预览
+              应用列表
             </MenuItem>
             <MenuItem name="build" to="/build">
               <Icon type="ios-navigate"></Icon>
-              打包
+              打包配置
             </MenuItem>
             <MenuItem name="user" to="/user">
               <Icon type="ios-navigate"></Icon>
@@ -31,7 +35,7 @@
         </Menu>
       </Header>
       <Layout>
-        <Layout :style="{marginTop: '60px',padding: '10px 10px 0'}">
+        <Layout :style="{padding: '10px 10px 0'}">
           <Content :style="{margin: '5px 5px 0', minHeight: '580px', background: '#fff'}">
             <transition name="fade" mode="out-in">
               <router-view/>
@@ -39,7 +43,6 @@
           </Content>
         </Layout>
       </Layout>
-      <Footer class="layout-footer-center">2019-2020 &copy; www.isjs.cn</Footer>
     </Layout>
   </div>
 </template>

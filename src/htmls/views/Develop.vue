@@ -4,6 +4,10 @@
       <div class="serve-over-menu">
         <p class="serve-over-menu-item">
           <Icon type="md-bulb" :color="configStatus.isOriginSuccess ? '#0cf52f': '#ec0c0c'"/>
+          <span>接口状态</span>
+        </p>
+        <p class="serve-over-menu-item">
+          <Icon type="md-bulb" :color="configStatus.isOriginDataSuccess ? '#0cf52f': '#ec0c0c'"/>
           <span>数据状态</span>
         </p>
         <p class="serve-over-menu-item">
@@ -69,6 +73,11 @@
                   </FormItem>
                 </Col>
               </Row>
+              <div class="serve-err" v-if="!$isNullOrEmpty(errorMsg.originMsg)">
+                <Divider orientation="left">错误信息：</Divider>
+                <p style="text-align: left">{{errorMsg.originMsg}}</p>
+              </div>
+
             </Form>
           </Card>
           <div>
@@ -76,7 +85,10 @@
             <p style="text-align: left">数据会自动保存，操作过程中请勿刷新页面</p>
           </div>
         </TabPane>
-        <TabPane label="页面搭建" icon="ios-expand">标签二的内容</TabPane>
+        <TabPane label="页面搭建" icon="ios-expand">
+
+
+        </TabPane>
         <TabPane label="JSON预览" icon="md-construct">
           <pre class="serve-pre">{{outerJson}}</pre>
         </TabPane>
@@ -93,9 +105,13 @@
       return {
         current: 0,
         pageCode:'',
+        errorMsg:{
+          originMsg: ''
+        },
         configStatus:{
           isValidJson: false,
           isOriginSuccess: false,
+          isOriginDataSuccess: false,
           isComponentsSuccess: false
         },
         formValidate: {
@@ -152,11 +168,61 @@
             "bodyConfig": bodyConfig
           }
         }
-
         return JSON.stringify(pageConfig, null, 2);
       }
     },
+    watch: {
+      'formValidate.originUrl'(){
+        this.checkOrigin();
+      },
+      'formValidate.originMethod'(){
+        this.checkOrigin();
+      },
+      'formValidate.dataKeyChain'(){
+        this.checkOrigin();
+      },
+    },
+    created() {
+      this.checkOrigin();
+    },
     methods: {
+      checkOrigin(){
+        if(this.$isNullOrEmpty(this.formValidate.originUrl) ||
+          this.$isNullOrEmpty(this.formValidate.originMethod) ||
+          this.$isNullOrEmpty(this.formValidate.dataKeyChain)){
+          this.configStatus.isOriginSuccess = false;
+          this.configStatus.isOriginDataSuccess = false;
+          this.configStatus.isComponentsSuccess = false;
+          return;
+        }
+
+        this.$send({
+          url: this.formValidate.originUrl,
+          method: this.formValidate.originMethod,
+          params: Object.assign({})
+        })
+        .then(res => {
+          this.errorMsg.originMsg = '';
+          this.configStatus.isOriginSuccess = true;
+          if(res.status === 200){
+            if(!this.$isNullOrEmpty(this.$getChainData(res.data, this.formValidate.dataKeyChain))){
+              this.configStatus.isOriginDataSuccess = true;
+              this.errorMsg.originMsg = '';
+            }else{
+              this.configStatus.isOriginDataSuccess = false;
+              this.errorMsg.originMsg = '数据解析错误，请检查数据键配置';
+            }
+          }else{
+            this.configStatus.isOriginSuccess = false;
+            this.errorMsg.originMsg = `接口状态错误：${res.status}`;
+          }
+        })
+        .catch(err => {
+          this.configStatus.isOriginSuccess = false;
+          this.errorMsg.originMsg = err;
+          console.log("系统异常，请稍后再试", err);
+        });
+      },
       reloadIframe(){
         this.$refs['iframeView'].contentWindow.location.reload(true);
       },
@@ -176,6 +242,12 @@
   }
 </script>
 <style lang="less">
+  .serve-err{
+    color: #e52c2c;
+    .ivu-divider{
+      color: #e52c2c;
+    }
+  }
   .serve-over-menu-item{
     padding: 10px 0;
     width: 100%;
