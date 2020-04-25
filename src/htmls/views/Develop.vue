@@ -93,18 +93,19 @@
                   <TabPane label="容器组件">
                     <draggable class="serve-list-group"
                                tag="ul"
-                               v-model="list"
+                               v-model="ComponentsObj.publicCom"
                                v-bind="dragOptions"
                                @start="drag = true"
                                @end="drag = false">
                       <transition-group type="transition" :name="!drag ? 'flip-list' : null">
                         <li class="serve-list-group-item"
-                            v-for="element in list"
-                            :key="element.id">
-                          <i :class="element.fixed ? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'"
-                             @click="element.fixed = !element.fixed"
-                             aria-hidden="true"></i>
-                          {{ element.label }}
+                            v-for="(element, index) in ComponentsObj.publicCom"
+                            :key="index+'**'">
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="[]"></component>
+                          {{ element.name }}
                         </li>
                       </transition-group>
                     </draggable>
@@ -158,12 +159,14 @@
 
 <script>
   import draggable from 'vuedraggable'
+  import ComponentsObj from '../../assets/js/allComponentsConfig'
 
   export default {
     name: 'develop',
     components: {draggable},
     data() {
       return {
+        ComponentsObj,
         drag: false,
         tabName:'pageBody',
         current: 0,
@@ -280,6 +283,17 @@
       this.checkOrigin();
     },
     methods: {
+      getDefaultProp(options){
+        let resultObj = {};
+        options.map((item) => {
+          if( item.type === 'json'){
+            resultObj[item.key] = JSON.parse(item.defaultValue);
+          }else{
+            resultObj[item.key] = item.defaultValue;
+          }
+        });
+        return resultObj;
+      },
       checkOrigin(){
         if(this.$isNullOrEmpty(this.formValidate.originUrl) ||
           this.$isNullOrEmpty(this.formValidate.originMethod) ||

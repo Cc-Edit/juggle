@@ -13,9 +13,14 @@ function InsertHtmlPlugin(options) {
 InsertHtmlPlugin.prototype.apply = function (compiler) {
   compiler.hooks.compilation.tap('InsertHtmlPlugin', function(compilation){
     compilation.hooks['htmlWebpackPluginBeforeHtmlProcessing'].tapAsync('InsertHtmlPlugin', (data, callback) => {
-      data.html =  data.html.replace('</head>', `<script>
-      ${insertHtml.baidu}
-      ${insertHtml.remjs}</script></head>`);
+      if(data.filename === 'index.html'){
+        data.html =  data.html.replace('</head>', `<script>
+          ${insertHtml.baidu}</script></head>`);
+      }else{
+        data.html =  data.html.replace('</head>', `<script>
+          ${insertHtml.baidu}
+          ${insertHtml.remjs}</script></head>`);
+      }
       callback(null, data);
     });
   })
