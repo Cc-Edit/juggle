@@ -13,7 +13,7 @@ function InsertHtmlPlugin(options) {
 InsertHtmlPlugin.prototype.apply = function (compiler) {
   compiler.hooks.compilation.tap('InsertHtmlPlugin', function(compilation){
     compilation.hooks['htmlWebpackPluginBeforeHtmlProcessing'].tapAsync('InsertHtmlPlugin', (data, callback) => {
-      if(data.filename === 'index.html'){
+      if(data.outputName === 'index.html'){
         data.html =  data.html.replace('</head>', `<script>
           ${insertHtml.baidu}</script></head>`);
       }else{

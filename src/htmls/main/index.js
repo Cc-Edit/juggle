@@ -6,6 +6,9 @@ import ViewUI from 'view-design';
 import store from '../store/index.js'
 import 'view-design/dist/styles/iview.css';
 
+import { Lazyload } from 'vant';
+Vue.use(Lazyload, {});
+
 import BlockImg from "@/components/block/BlockImg.vue";
 import BlockSwiper from "@/components/block/BlockSwiper.vue";
 import BlockImgCard from "@/components/block/BlockImgCard.vue";
