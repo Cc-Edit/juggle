@@ -86,7 +86,7 @@
         </TabPane>
         <TabPane label="页面搭建" name="pageBody" icon="ios-expand">
           <div class="serve-components">
-            <Card>
+            <Card style="width: 100%; height: 667px">
               <p slot="title">组件列表</p>
               <div>
 
