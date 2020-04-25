@@ -26,8 +26,8 @@
       <iframe ref="iframeView" :src="`/report.html?pageCode=${pageCode}`"  frameborder="0" width="375px" height="667px" ></iframe>
     </div>
     <div class="serve-left">
-      <Tabs>
-        <TabPane label="基础设置" icon="md-cog">
+      <Tabs :value="tabName">
+        <TabPane label="基础设置" name="default" icon="md-cog">
           <Card>
             <p slot="title" style="text-align: left">页面信息</p>
             <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100" label-position="left">
@@ -84,12 +84,49 @@
             <p style="text-align: left">数据会自动保存，操作过程中请勿刷新页面</p>
           </div>
         </TabPane>
-        <TabPane label="页面搭建" icon="ios-expand">
+        <TabPane label="页面搭建" name="pageBody" icon="ios-expand">
+          <div class="serve-components">
+            <Card>
+              <p slot="title">组件列表</p>
+              <div>
 
+              </div>
+            </Card>
+          </div>
+          <div class="serve-pageBock">
+            <Card style="width: 100%; height: 667px">
+              <p slot="title">页面结构</p>
+              <div>
+                <draggable class="serve-list-group"
+                           tag="ul"
+                           v-model="list"
+                           v-bind="dragOptions"
+                           @start="drag = true"
+                           @end="drag = false">
+                  <transition-group type="transition" :name="!drag ? 'flip-list' : null">
+                    <li class="serve-list-group-item"
+                        v-for="element in list"
+                        :key="element.id">
+                      <i :class="element.fixed ? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'"
+                         @click="element.fixed = !element.fixed"
+                         aria-hidden="true"></i>
+                      {{ element.label }}
+                    </li>
+                  </transition-group>
+                </draggable>
+              </div>
+            </Card>
+          </div>
+          <div class="serve-detail">
+            <Card style="width: 100%; height: 667px">
+              <p slot="title">详细设置</p>
+              <div>
 
-
+              </div>
+            </Card>
+          </div>
         </TabPane>
-        <TabPane label="JSON预览" icon="md-construct">
+        <TabPane label="JSON预览" name="jsonText" icon="md-construct">
           <pre class="serve-pre">{{outerJson}}</pre>
         </TabPane>
       </Tabs>
@@ -98,18 +135,21 @@
 </template>
 
 <script>
+  import draggable from 'vuedraggable'
+
   export default {
     name: 'develop',
-    components: {},
+    components: {draggable},
     data() {
       return {
+        drag: false,
+        tabName:'pageBody',
         current: 0,
         pageCode:'',
         errorMsg:{
           originMsg: ''
         },
-        lists: {
-          A: [
+        list: [
             {
               id: 1,
               label: "Item A1"
@@ -118,9 +158,7 @@
               id: 2,
               label: "Item A2"
             },
-          ],
-          B: []
-        },
+        ],
         configStatus:{
           isValidJson: false,
           isOriginSuccess: false,
@@ -158,6 +196,14 @@
       }
     },
     computed: {
+      dragOptions() {
+        return {
+          animation: 200,
+          group: "description",
+          disabled: false,
+          ghostClass: "serve-ghost"
+        };
+      },
       outerJson(){
         let dataSource = {
           "query": {
@@ -255,57 +301,52 @@
   }
 </script>
 <style lang="less" scoped>
-  .serve-err{
-    color: #e52c2c;
-    .ivu-divider{
-      color: #e52c2c;
-    }
+  .flip-list-move {
+    transition: transform 0.5s;
   }
-  .serve-over-menu-item{
-    padding: 10px 0;
-    width: 100%;
-    margin-bottom: 30px;
-    >span{
-      width: 100%;
-      font-size: 13px;
-      color: #666;
-      text-align: center;
-      display: inline-block;
-    }
-    .ivu-icon{
-      font-size: 30px;
-      margin-bottom: 5px;
-    }
+  .no-move {
+    transition: transform 0s;
   }
-  .serve-over-menu{
-    width: 75px;
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-    top: 108px;
-    right: -40px;
-    bottom: 121px;
-    border-radius: 10px;
+  .serve-ghost {
+    opacity: 0.5;
+    background: #c8ebfb;
   }
-  .serve-left{
-    margin-left: 550px;
-    padding: 20px 20px 0 0;
-    height: 898px;
+  .serve-list-group {
+    min-height: 20px;
+  }
+  .serve-list-group-item {
+    cursor: move;
     position: relative;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
   }
-  .serve-overview{
-    position: relative;
-    margin-left: -40px;
+  .serve-list-group-item i {
+    cursor: pointer;
+  }
+  .serve-pageBock{
+    width: 375px;
+    height: 667px;
     float: left;
     display: inline-block;
-    padding: 108px 67px 121px 80px;
-    background-image: url('~@/assets/images/iphone-bg.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    box-sizing: content-box;
+    overflow: scroll;
+    margin-right: 20px;
   }
-  .serve-pre{
-    text-align: left;
-    line-height: 20px;
-    font-size: 13px;
+  .serve-detail{
+    width: 500px;
+    height: 667px;
+    float: left;
+    display: inline-block;
+    overflow: scroll;
+  }
+  .serve-components{
+    width: 400px;
+    height: 667px;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    overflow: scroll;
   }
 </style>

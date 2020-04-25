@@ -104,5 +104,61 @@
     margin-right: 20px;
     float: right;
   }
-
+  .ivu-layout-content{
+   overflow: scroll;
+  }
+  .serve-err{
+    color: #e52c2c;
+    .ivu-divider{
+      color: #e52c2c;
+    }
+  }
+  .serve-over-menu-item{
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 30px;
+    >span{
+      width: 100%;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      display: inline-block;
+    }
+    .ivu-icon{
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+  }
+  .serve-over-menu{
+    width: 75px;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 108px;
+    right: -40px;
+    bottom: 121px;
+    border-radius: 10px;
+  }
+  .serve-left{
+    margin-left: 550px;
+    padding: 20px 20px 0 0;
+    height: 898px;
+    width: 1350px;
+    position: relative;
+  }
+  .serve-overview{
+    position: relative;
+    margin-left: -40px;
+    float: left;
+    display: inline-block;
+    padding: 108px 67px 121px 80px;
+    background-image: url('~@/assets/images/iphone-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+  }
+  .serve-pre{
+    text-align: left;
+    line-height: 20px;
+    font-size: 13px;
+  }
 </style>
