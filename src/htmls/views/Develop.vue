@@ -150,14 +150,26 @@
           originMsg: ''
         },
         list: [
-            {
-              id: 1,
-              label: "Item A1"
-            },
-            {
-              id: 2,
-              label: "Item A2"
-            },
+          {
+            id: 1,
+            label: "Item A1"
+          },
+          {
+            id: 2,
+            label: "Item A2"
+          },
+          {
+            id: 2,
+            label: "Item A2"
+          },
+          {
+            id: 2,
+            label: "Item A2"
+          },
+          {
+            id: 2,
+            label: "Item A2"
+          },
         ],
         configStatus:{
           isValidJson: false,
