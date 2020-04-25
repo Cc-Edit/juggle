@@ -43,6 +43,8 @@ const ComponentsObj = {
     }
   ],
   blockCom:[],
-  container:[]
+  container:[],
+  formCom:[],
+  actionCom:[],
 };
 export default ComponentsObj;

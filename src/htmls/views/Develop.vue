@@ -91,6 +91,7 @@
               <div>
                 <Tabs type="card" name="child" >
                   <TabPane tab="child" label="容器组件">
+                    <span v-if="ComponentsObj.publicCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
                                v-model="ComponentsObj.publicCom"
                                v-bind="dragOptions">
@@ -108,10 +109,82 @@
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane tab="child"  label="内容组件">标签二的内容</TabPane>
-                  <TabPane tab="child"  label="公共组件">标签三的内容</TabPane>
-                  <TabPane tab="child"  label="表单组件">标签三的内容</TabPane>
-                  <TabPane tab="child"  label="操作组件">标签三的内容</TabPane>
+                  <TabPane tab="child"  label="内容组件">
+                    <span v-if="ComponentsObj.container.length === 0" class="serve-empty">暂无数据</span>
+                    <draggable class="serve-list-group"
+                               v-model="ComponentsObj.container"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
+                             v-for="(element, index) in ComponentsObj.container"
+                             :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="[]"></component>
+                        </div>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
+                  <TabPane tab="child"  label="公共组件">
+                    <span v-if="ComponentsObj.blockCom.length === 0" class="serve-empty">暂无数据</span>
+                    <draggable class="serve-list-group"
+                               v-model="ComponentsObj.blockCom"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
+                             v-for="(element, index) in ComponentsObj.blockCom"
+                             :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="[]"></component>
+                        </div>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
+                  <TabPane tab="child"  label="表单组件">
+                    <span v-if="ComponentsObj.formCom.length === 0" class="serve-empty">暂无数据</span>
+                    <draggable class="serve-list-group"
+                               v-model="ComponentsObj.formCom"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
+                             v-for="(element, index) in ComponentsObj.formCom"
+                             :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="[]"></component>
+                        </div>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
+                  <TabPane tab="child"  label="操作组件">
+                    <span v-if="ComponentsObj.actionCom.length === 0" class="serve-empty">暂无数据</span>
+                    <draggable class="serve-list-group"
+                               v-model="ComponentsObj.actionCom"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
+                             v-for="(element, index) in ComponentsObj.actionCom"
+                             :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                          <component :is="element.templateId"
+                                     :prop="getDefaultProp(element.options)"
+                                     :baseData="element.baseData"
+                                     :childItem="[]"></component>
+                        </div>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
                 </Tabs>
               </div>
             </Card>
