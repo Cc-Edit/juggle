@@ -77,7 +77,6 @@
                 <Divider orientation="left">错误信息：</Divider>
                 <p style="text-align: left">{{errorMsg.originMsg}}</p>
               </div>
-
             </Form>
           </Card>
           <div>
@@ -86,6 +85,7 @@
           </div>
         </TabPane>
         <TabPane label="页面搭建" icon="ios-expand">
+
 
 
         </TabPane>
@@ -107,6 +107,19 @@
         pageCode:'',
         errorMsg:{
           originMsg: ''
+        },
+        lists: {
+          A: [
+            {
+              id: 1,
+              label: "Item A1"
+            },
+            {
+              id: 2,
+              label: "Item A2"
+            },
+          ],
+          B: []
         },
         configStatus:{
           isValidJson: false,
@@ -241,7 +254,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   .serve-err{
     color: #e52c2c;
     .ivu-divider{
