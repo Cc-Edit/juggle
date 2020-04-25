@@ -26,7 +26,7 @@
       <iframe ref="iframeView" :src="`/report.html?pageCode=${pageCode}`"  frameborder="0" width="375px" height="667px" ></iframe>
     </div>
     <div class="serve-left">
-      <Tabs :value="tabName">
+      <Tabs :value="tabName" name="parent">
         <TabPane label="基础设置" name="default" icon="md-cog">
           <Card>
             <p slot="title" style="text-align: left">页面信息</p>
@@ -89,31 +89,29 @@
             <Card style="width: 100%; height: 667px">
               <p slot="title">组件列表</p>
               <div>
-                <Tabs type="card">
-                  <TabPane label="容器组件">
+                <Tabs type="card" name="child" >
+                  <TabPane tab="child" label="容器组件">
                     <draggable class="serve-list-group"
-                               tag="ul"
                                v-model="ComponentsObj.publicCom"
-                               v-bind="dragOptions"
-                               @start="drag = true"
-                               @end="drag = false">
-                      <transition-group type="transition" :name="!drag ? 'flip-list' : null">
-                        <li class="serve-list-group-item"
+                               v-bind="dragOptions">
+                      <transition-group type="transition" >
+                        <div class="serve-list-group-item"
                             v-for="(element, index) in ComponentsObj.publicCom"
                             :key="index+'**'">
+                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
                           <component :is="element.templateId"
                                      :prop="getDefaultProp(element.options)"
                                      :baseData="element.baseData"
                                      :childItem="[]"></component>
-                          {{ element.name }}
-                        </li>
+                        </div>
                       </transition-group>
                     </draggable>
                   </TabPane>
-                  <TabPane label="内容组件">标签二的内容</TabPane>
-                  <TabPane label="公共组件">标签三的内容</TabPane>
-                  <TabPane label="表单组件">标签三的内容</TabPane>
-                  <TabPane label="操作组件">标签三的内容</TabPane>
+                  <TabPane tab="child"  label="内容组件">标签二的内容</TabPane>
+                  <TabPane tab="child"  label="公共组件">标签三的内容</TabPane>
+                  <TabPane tab="child"  label="表单组件">标签三的内容</TabPane>
+                  <TabPane tab="child"  label="操作组件">标签三的内容</TabPane>
                 </Tabs>
               </div>
             </Card>
@@ -369,8 +367,22 @@
     display: block;
     padding: 10px 20px;
     margin-bottom: -1px;
-    background-color: #fff;
+    background-color: rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    .serve-list-group-item-title{
+      font-size: 15px;
+      font-weight: bold;
+      text-align: left;
+      line-height: 20px;
+      color: #666;
+    }
+    .serve-list-group-item-desc{
+      font-size: 13px;
+      text-align: left;
+      line-height: 25px;
+      color: #999;
+    }
   }
   .serve-list-group-item i {
     cursor: pointer;
