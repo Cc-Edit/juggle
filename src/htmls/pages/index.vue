@@ -140,9 +140,9 @@
   }
   .serve-left{
     margin-left: 550px;
-    padding: 20px 20px 0 0;
+    padding: 20px 0 0 0;
     height: 898px;
-    width: 1350px;
+    width: 1330px;
     position: relative;
   }
   .serve-overview{

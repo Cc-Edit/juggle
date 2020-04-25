@@ -89,7 +89,31 @@
             <Card style="width: 100%; height: 667px">
               <p slot="title">组件列表</p>
               <div>
-
+                <Tabs type="card">
+                  <TabPane label="容器组件">
+                    <draggable class="serve-list-group"
+                               tag="ul"
+                               v-model="list"
+                               v-bind="dragOptions"
+                               @start="drag = true"
+                               @end="drag = false">
+                      <transition-group type="transition" :name="!drag ? 'flip-list' : null">
+                        <li class="serve-list-group-item"
+                            v-for="element in list"
+                            :key="element.id">
+                          <i :class="element.fixed ? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'"
+                             @click="element.fixed = !element.fixed"
+                             aria-hidden="true"></i>
+                          {{ element.label }}
+                        </li>
+                      </transition-group>
+                    </draggable>
+                  </TabPane>
+                  <TabPane label="内容组件">标签二的内容</TabPane>
+                  <TabPane label="公共组件">标签三的内容</TabPane>
+                  <TabPane label="表单组件">标签三的内容</TabPane>
+                  <TabPane label="操作组件">标签三的内容</TabPane>
+                </Tabs>
               </div>
             </Card>
           </div>
@@ -97,19 +121,17 @@
             <Card style="width: 100%; height: 667px">
               <p slot="title">页面结构</p>
               <div>
+                <span v-if="bodyConfig.length === 0" class="serve-empty">将组件拖拽到此列表进行搭建</span>
                 <draggable class="serve-list-group"
                            tag="ul"
-                           v-model="list"
+                           v-model="bodyConfig"
                            v-bind="dragOptions"
                            @start="drag = true"
                            @end="drag = false">
                   <transition-group type="transition" :name="!drag ? 'flip-list' : null">
                     <li class="serve-list-group-item"
-                        v-for="element in list"
+                        v-for="element in bodyConfig"
                         :key="element.id">
-                      <i :class="element.fixed ? 'fa fa-anchor' : 'glyphicon glyphicon-pushpin'"
-                         @click="element.fixed = !element.fixed"
-                         aria-hidden="true"></i>
                       {{ element.label }}
                     </li>
                   </transition-group>
@@ -149,6 +171,7 @@
         errorMsg:{
           originMsg: ''
         },
+        bodyConfig:[],
         list: [
           {
             id: 1,
@@ -324,7 +347,7 @@
     background: #c8ebfb;
   }
   .serve-list-group {
-    min-height: 20px;
+    min-height: 567px;
   }
   .serve-list-group-item {
     cursor: move;
@@ -360,5 +383,17 @@
     float: left;
     margin-right: 20px;
     overflow: scroll;
+  }
+  .serve-empty{
+    font-size: 13px;
+    line-height: 20px;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    color:#999;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
   }
 </style>
