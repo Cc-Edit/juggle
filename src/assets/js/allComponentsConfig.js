@@ -3,6 +3,61 @@
  * */
 const ComponentsObj = {
   publicCom:[
+    {
+      name: '弹窗',
+      templateId: 'PublicDraw',
+      description: '设置页面弹窗',
+      develop: 'isjs.cn',
+      options:[
+        {
+          key: 'drawProp',
+          type: 'text',
+          defaultValue: {
+            "position": "left",
+            "closeable": false,
+            "round": false,
+            "close-icon": 'close',
+            "close-on-click-overlay": false,
+            "get-container": "#app"
+          }
+        }
+      ],
+      baseData:{
+        flexTestData: {
+          A: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png"
+        }
+      }
+    },
+    {
+      name: '唤起弹窗',
+      templateId: 'PublicBubble',
+      description: '点击唤出页面弹窗',
+      develop: 'isjs.cn',
+      options:[
+        {
+          key: 'bubbleProp',
+          type: 'text',
+          defaultValue: '弹窗测试'
+        },
+        {
+          key: 'dataKeyChain',
+          type: 'text',
+          defaultValue: 'flexTestData,A'
+        },
+        {
+          key: 'styleOptions',
+          type: 'text',
+          defaultValue: {
+            display: 'none'
+          }
+        }
+      ],
+      baseData:{
+        flexTestData: {
+          A: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png"
+        }
+      }
+    }
   ],
   blockCom:[
     {
@@ -366,7 +421,7 @@ const ComponentsObj = {
       }
     },
     {
-      name: '列表容器',
+      name: '列表容器(内部数据)',
       templateId: 'ContainerList',
       description: '瀑布流列表容器，支持内嵌各种组件，支持独立获取数据',
       develop: 'isjs.cn',
@@ -385,6 +440,104 @@ const ComponentsObj = {
           key: 'dataKeyChain',
           type: 'text',
           defaultValue: 'listTestData'
+        },
+        {
+          key: 'styleOptions',
+          type: 'text',
+          defaultValue: ''
+        }
+      ],
+      baseData:{
+        listTestData: [
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+            "num": "4",
+            "price": "100.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          },
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
+            "num": "2",
+            "price": "98.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          },
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+            "num": "5",
+            "price": "8.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          },
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
+            "num": "50",
+            "price": "88.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          },
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
+            "num": "4",
+            "price": "100.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          },
+          {
+            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
+            "num": "2",
+            "price": "98.00",
+            "title": "这里是商品名称",
+            "tags": ["北京", "有货"],
+            "desc": "这里是产品说明，产品说明，产品说明，产品说明"
+          }
+        ]
+      },
+      childItem:[
+        {
+          "templateId": "BlockImgCard",
+          "prop": {
+            "dataKeyChain": "",
+            "styleOptions":{}
+          }
+        }
+      ]
+    },
+    {
+      name: '列表容器(外部数据)',
+      templateId: 'ContainerList',
+      description: '瀑布流列表容器，独立获取数据',
+      develop: 'isjs.cn',
+      options:[
+        {
+          key: 'listProp',
+          type: 'obj',
+          defaultValue: {
+            "loading-text": "加载中...",
+            "finished-text": "",
+            "error-text": "请求失败，刷新页面重新加载",
+            "error.sync": true,
+          }
+        },
+        {
+          key: 'dataSource',
+          type: 'obj',
+          defaultValue: {
+            "query": {
+              "publishStatus":"3"
+            },
+            "origin": {
+              "originUrl": "http://juggle.isjs.cn/mock/0002.json",
+              "originMethod": "get",
+              "dataKeyChain": "listTestData"
+            }
+          }
         },
         {
           key: 'styleOptions',
