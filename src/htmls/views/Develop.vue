@@ -181,7 +181,7 @@
           <div class="serve-pageBock">
             <Card style="width: 100%; height: 707px">
               <p slot="title">页面结构</p>
-              <div>
+              <div class="serve-pagebody">
                 <draggable class="serve-list-group" :list="bodyConfig" group="people">
                     <div :class="`serve-list-group-item ${activePageItem === `${element.templateId}-${index}` ? 'active' : ''}`"
                          v-for="(element, index) in bodyConfig"
@@ -207,7 +207,7 @@
           </div>
         </TabPane>
         <TabPane label="JSON预览" name="jsonText" icon="md-construct">
-          <pre class="serve-pre">{{outerJson}}</pre>
+          <pre class="serve-pre">{{outerJson.pageConfigStr}}</pre>
         </TabPane>
       </Tabs>
     </div>
@@ -235,7 +235,7 @@
         activePageItem:'',
         tabName:'pageBody',
         current: 0,
-        pageCode:'',
+        pageCode:'test',
         errorMsg:{
           originMsg: ''
         },
@@ -333,7 +333,7 @@
             "dataKeyChain": this.formValidate.dataKeyChain
           }
         }
-        let bodyConfig = [];
+        let bodyConfig = this.bodyConfig;
         let pageConfig = {
           "pageTitle": this.formValidate.pageTitle,
           "author": this.formValidate.author,
@@ -345,7 +345,10 @@
             "bodyConfig": bodyConfig
           }
         }
-        return JSON.stringify(pageConfig, null, 2);
+        return {
+          pageConfig,
+          pageConfigStr: JSON.stringify(pageConfig, null, 2)
+        }
       }
     },
     watch: {
@@ -412,7 +415,20 @@
         });
       },
       reloadIframe(){
-        this.$refs['iframeView'].contentWindow.location.reload(true);
+        this.$send({
+          url: '/api/save',
+          method: 'post',
+          params: JSON.stringify({pageData: this.outerJson.pageConfig, pageCode: this.pageCode})
+        })
+        .then(() => {
+          this.$refs['iframeView'].contentWindow.location.reload(true);
+        })
+        .catch(err => {
+          console.log("系统异常，请稍后再试", err);
+          this.$refs['iframeView'].contentWindow.location.reload(true);
+        });
+
+
       },
       handleSubmit (name) {
         this.$refs[name].validate((valid) => {
@@ -524,5 +540,9 @@
   }
   .list-group {
     min-height: 200px;
+  }
+  .serve-pagebody{
+    height: 650px;
+    overflow: scroll;
   }
 </style>

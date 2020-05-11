@@ -1,6 +1,8 @@
 //构建工具类
 const buildUtil = require('./src/assets/js/buildUtil');
 
+const serveApi = require('./src/assets/js/serveApi');
+
 //html 插入文件插件
 const InsertHtmlPlugin = require('./src/assets/js/insertHtmlPlugin');
 
@@ -42,6 +44,10 @@ module.exports = {
       warnings: true,
       errors: true
     },
+    watchOptions: {
+      ignored: [/node_modules/, /public/]
+    },
+    before: serveApi.before,
     open: false, //不自动打开浏览器
     compress: true, //启用Gzip
     proxy: proxyOptions
