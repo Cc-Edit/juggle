@@ -27,7 +27,7 @@ exports.before = function(app) {
       res.status(200).json({ status: 200, isOk:false, msg:"格式异常" });
       return;
     }
-    var logFilePath = eagleConfig.logPath +  'config-' + data.pageCode + '.js';
+    var logFilePath = eagleConfig.logPath +  'config-local-' + data.pageCode + '.js';
     let fd = fs.openSync(logFilePath, 'w');
     fs.writeFileSync(fd, JSON.stringify(data.pageData));
     fs.closeSync(fd);

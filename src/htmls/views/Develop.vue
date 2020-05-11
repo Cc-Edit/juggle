@@ -33,6 +33,11 @@
             <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100" label-position="left">
               <Row :gutter="30">
                 <Col span="12">
+                  <FormItem label="页面编码：">
+                    <Input v-model="pageCode" placeholder="请输入页面编码"/>
+                  </FormItem>
+                </Col>
+                <Col span="12">
                   <FormItem label="页面标题：" prop="pageTitle">
                     <Input v-model="formValidate.pageTitle" placeholder="请输入页面标题"/>
                   </FormItem>
