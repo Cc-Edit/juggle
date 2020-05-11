@@ -116,6 +116,7 @@
     padding: 10px 0;
     width: 100%;
     margin-bottom: 30px;
+    text-align: center;
     >span{
       width: 100%;
       font-size: 13px;

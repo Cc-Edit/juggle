@@ -92,97 +92,86 @@
                 <Tabs type="card" name="child" >
                   <TabPane class="serve-list-group-booy" tab="child" label="容器组件">
                     <span v-if="ComponentsObj.container.length === 0" class="serve-empty">暂无数据</span>
-                    <draggable class="serve-list-group"
-                               v-model="ComponentsObj.container"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                            v-for="(element, index) in ComponentsObj.container"
-                            :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="element.childItem || []"></component>
-                        </div>
-                      </transition-group>
+                    <draggable class="serve-list-group" :list="ComponentsObj.container"
+                               :group="{ name: 'people', pull: 'clone', put: false }">
+                      <div class="serve-list-group-item"
+                           v-for="(element) in ComponentsObj.container"
+                          :key="element.name">
+                        <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                        <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                        <component :is="element.templateId"
+                                   :prop="getDefaultProp(element.options)"
+                                   :baseData="element.baseData"
+                                   :childItem="element.childItem || []"></component>
+                      </div>
                     </draggable>
                   </TabPane>
                   <TabPane class="serve-list-group-booy"  tab="child"  label="内容组件">
                     <span v-if="ComponentsObj.blockCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
-                               v-model="ComponentsObj.blockCom"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.blockCom"
-                             :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="[]"></component>
-                        </div>
-                      </transition-group>
+                               :list="ComponentsObj.blockCom"
+                               :group="{ name: 'people', pull: 'clone', put: false }">
+                      <div class="serve-list-group-item"
+                           v-for="(element) in ComponentsObj.blockCom"
+                           :key="element.name">
+                        <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                        <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                        <component :is="element.templateId"
+                                   :prop="getDefaultProp(element.options)"
+                                   :baseData="element.baseData"
+                                   :childItem="[]"></component>
+                      </div>
                     </draggable>
                   </TabPane>
                   <TabPane class="serve-list-group-booy"  tab="child"  label="公共组件">
                     <span v-if="ComponentsObj.publicCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
-                               v-model="ComponentsObj.publicCom"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.publicCom"
-                             :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="[]"></component>
-                        </div>
-                      </transition-group>
+                               :list="ComponentsObj.publicCom"
+                               :group="{ name: 'people', pull: 'clone', put: false }">
+                      <div class="serve-list-group-item"
+                           v-for="(element, index) in ComponentsObj.publicCom"
+                           :key="index+'**'">
+                        <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                        <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                        <component :is="element.templateId"
+                                   :prop="getDefaultProp(element.options)"
+                                   :baseData="element.baseData"
+                                   :childItem="[]"></component>
+                      </div>
                     </draggable>
                   </TabPane>
                   <TabPane class="serve-list-group-booy"  tab="child"  label="表单组件">
                     <span v-if="ComponentsObj.formCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
-                               v-model="ComponentsObj.formCom"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.formCom"
-                             :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="[]"></component>
-                        </div>
-                      </transition-group>
+                               :list="ComponentsObj.formCom"
+                               :group="{ name: 'people', pull: 'clone', put: false }">
+                      <div class="serve-list-group-item"
+                           v-for="(element, index) in ComponentsObj.formCom"
+                           :key="index+'**'">
+                        <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                        <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                        <component :is="element.templateId"
+                                   :prop="getDefaultProp(element.options)"
+                                   :baseData="element.baseData"
+                                   :childItem="[]"></component>
+                      </div>
                     </draggable>
                   </TabPane>
                   <TabPane class="serve-list-group-booy"  tab="child"  label="操作组件">
                     <span v-if="ComponentsObj.actionCom.length === 0" class="serve-empty">暂无数据</span>
                     <draggable class="serve-list-group"
-                               v-model="ComponentsObj.actionCom"
-                               v-bind="dragOptions">
-                      <transition-group type="transition" >
-                        <div class="serve-list-group-item"
-                             v-for="(element, index) in ComponentsObj.actionCom"
-                             :key="index+'**'">
-                          <h4 class="serve-list-group-item-title">{{element.name}}</h4>
-                          <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
-                          <component :is="element.templateId"
-                                     :prop="getDefaultProp(element.options)"
-                                     :baseData="element.baseData"
-                                     :childItem="[]"></component>
-                        </div>
-                      </transition-group>
+                               :list="ComponentsObj.actionCom"
+                               :group="{ name: 'people', pull: 'clone', put: false }">
+                      <div class="serve-list-group-item"
+                           v-for="(element, index) in ComponentsObj.actionCom"
+                           :key="index+'**'">
+                        <h4 class="serve-list-group-item-title">{{element.name}}</h4>
+                        <p class="serve-list-group-item-desc">简介：{{element.description}}</p>
+                        <component :is="element.templateId"
+                                   :prop="getDefaultProp(element.options)"
+                                   :baseData="element.baseData"
+                                   :childItem="[]"></component>
+                      </div>
                     </draggable>
                   </TabPane>
                 </Tabs>
@@ -193,21 +182,18 @@
             <Card style="width: 100%; height: 707px">
               <p slot="title">页面结构</p>
               <div>
-                <span v-if="bodyConfig.length === 0" class="serve-empty">将组件拖拽到此列表进行搭建</span>
-                <draggable class="serve-list-group"
-                           tag="ul"
-                           v-model="bodyConfig"
-                           v-bind="dragOptions"
-                           @start="drag = true"
-                           @end="drag = false">
-                  <transition-group type="transition" :name="!drag ? 'flip-list' : null">
-                    <li class="serve-list-group-item"
-                        v-for="element in bodyConfig"
-                        :key="element.id">
-                      {{ element.label }}
-                    </li>
-                  </transition-group>
+                <draggable class="serve-list-group" :list="bodyConfig" group="people">
+                    <div :class="`serve-list-group-item ${activePageItem === `${element.templateId}-${index}` ? 'active' : ''}`"
+                         v-for="(element, index) in bodyConfig"
+                         @click="activePageItem = `${element.templateId}-${index}`"
+                        :key="element.name">
+                      <component :is="element.templateId"
+                                 :prop="getDefaultProp(element.options)"
+                                 :baseData="element.baseData"
+                                 :childItem="[]"></component>
+                    </div>
                 </draggable>
+                <span v-if="bodyConfig.length === 0" class="serve-empty">将组件拖拽到此列表进行搭建</span>
               </div>
             </Card>
           </div>
@@ -237,15 +223,25 @@
     components: {draggable},
     data() {
       return {
+        list1: [
+          { name: "John", id: 1 },
+          { name: "Joao", id: 2 },
+          { name: "Jean", id: 3 },
+          { name: "Gerard", id: 4 }
+        ],
+        list2: [],
         ComponentsObj,
         drag: false,
+        activePageItem:'',
         tabName:'pageBody',
         current: 0,
         pageCode:'',
         errorMsg:{
           originMsg: ''
         },
-        bodyConfig:[],
+        bodyConfig:[
+
+        ],
         list: [
           {
             id: 1,
@@ -308,9 +304,22 @@
       dragOptions() {
         return {
           animation: 200,
-          group: "description",
+          name: "description",
           disabled: false,
-          ghostClass: "serve-ghost"
+          pull: 'clone',
+          emptyInsertThreshold: 40,
+          put: false
+        };
+      },
+      pageOptions() {
+        return {
+          animation: 200,
+          name: "description",
+          disabled: false,
+          //
+          // pull: 'clone',
+          // put: false,
+          // ghostClass: "serve-ghost"
         };
       },
       outerJson(){
@@ -457,6 +466,10 @@
       color: #999;
     }
   }
+  .serve-list-group-item.active{
+    border: 1px solid #1e46e1;
+    box-shadow: 0 0 10px -2px #1e46e1;
+  }
   .serve-list-group-item i {
     cursor: pointer;
   }
@@ -498,5 +511,18 @@
   .serve-list-group-booy{
     height: 585px;
     overflow: scroll;
+  }
+  .flip-list-move {
+    transition: transform 0.5s;
+  }
+  .no-move {
+    transition: transform 0s;
+  }
+  .ghost {
+    opacity: 0.5;
+    background: #c8ebfb;
+  }
+  .list-group {
+    min-height: 200px;
   }
 </style>
