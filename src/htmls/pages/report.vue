@@ -57,6 +57,7 @@
        * 获取报表数据
        * */
       getNewList(_query = {}){
+        debugger
         let {query, origin} = this.dataSource;
         if(this.$isNullOrEmpty(origin)){
           return;

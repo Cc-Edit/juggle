@@ -29,7 +29,7 @@ exports.before = function(app) {
     }
     var logFilePath = eagleConfig.logPath +  'config-local-' + data.pageCode + '.js';
     let fd = fs.openSync(logFilePath, 'w');
-    fs.writeFileSync(fd, JSON.stringify(data.pageData));
+    fs.writeFileSync(fd, 'var __pageConfig__ = ' + JSON.stringify(data.pageData, null, 2));
     fs.closeSync(fd);
     res.status(200).json({ status: 200, isOk:true, msg:"" });
   });
