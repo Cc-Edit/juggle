@@ -1,3 +1,4 @@
+const path = require('path');
 //构建工具类
 const buildUtil = require('./src/assets/js/buildUtil');
 
@@ -48,6 +49,7 @@ module.exports = {
       ignored: [/node_modules/, /public/]
     },
     before: serveApi.before,
+    contentBase: path.join(__dirname, 'public'),
     open: false, //不自动打开浏览器
     compress: true, //启用Gzip
     proxy: proxyOptions

@@ -41,7 +41,6 @@ let configUrl = ($isDev ? `/pageConfig/config-local-${pageCode}.js` : `pageConfi
 
 $getJsFile(`${configUrl}`,() => {
   let pageData =  window.__pageConfig__ || { emptyPage: true, pageConfig: {} };
-  debugger
   new Vue({
     store,
     propsData: pageData,
