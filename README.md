@@ -1,15 +1,6 @@
 # juggle
 
-# 招聘：
-如果您对前端可视化搭建以及前端低代码平台有兴趣，我邀请您入职我司，参与到我们的项目开发中来。
-有兴趣可推送简历到 18520504@qq.com
-
-
-## demo地址：
-服务器带宽有限，请耐心等待....      
-全功能demo：[http://juggle.isjs.cn/report.html?pageCode=0001](http://juggle.isjs.cn/report.html?pageCode=0001)  
-
-## 配置项文档：https://github.com/adminV/juggle/blob/master/OPTIONS.md 
+## 配置项文档：https://github.com/Cc-Edit/juggle/blob/master/OPTIONS.md 
 
 ## 公告：   
 项目目前只是一个简单的渲染工具，我希望它未来应该是一个功能更强大，配置更灵活的开发工具。    
@@ -20,13 +11,9 @@
 4. 拖拽布局后台实现
 5. 复交互类型页面的配置
 
-要实现以上功能，凭借个人力量需要长时间的整理分析，并且独立维护思路单一会考虑不全面。       
-所以在这里邀请各位参与到此开源项目的维护中。       
-只需要Fork到自己的仓库下，将功能点实现后提交PR给我即可。       
-参加开源项目的同学，会被列入到项目的人员列表中。
-
-欢迎关注我的公众号: **js前端架构**    
-![js前端架构](http://www.isjs.cn/wp-content/uploads/2013/06/2018_07_25_1136562613-1.png "关注我哟")
+|                                     WeChat🍻                                      |                                                打赏 :confetti_ball:                                                 | 
+|:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:| 
+| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/wechat.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
 
 ## 介绍
     阿里推出飞冰来进行页面搭建，但是飞冰的物料开发不是想象中的简单。   
