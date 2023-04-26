@@ -13,7 +13,7 @@
 
 |                                     WeChat🍻                                      |                                                打赏 :confetti_ball:                                                 | 
 |:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:| 
-| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/wechat.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
+| ![wechat.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/WeChatGroup.png) | ![img.png](https://github.com/Cc-Edit/Cc-Edit/blob/main/src/img.png) |
 
 ## 介绍
     阿里推出飞冰来进行页面搭建，但是飞冰的物料开发不是想象中的简单。   
