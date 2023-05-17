@@ -13,7 +13,7 @@
 
 |    学习讨论小组🍻    |           打赏（赠送学习资料：[webNote](https://github.com/Cc-Edit/webNote)） :confetti_ball:     | 
 |:-------------------------------------------------------------------------------:|:--------------------------------------------------------------------:| 
-| ![wechat.png](https://static.sisjs.com/images/WeChatGroup.png)  | ![img.png](https://static.sisjs.com/images/img.png) |
+| ![wechat.png](https://static.sisjs.com/images/WeChatGroup.png?v=1)  | ![img.png](https://static.sisjs.com/images/img.png) |
 
 ## 介绍
     阿里推出飞冰来进行页面搭建，但是飞冰的物料开发不是想象中的简单。   
