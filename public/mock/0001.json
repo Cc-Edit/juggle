@@ -5,38 +5,38 @@
   "data": {
     "content": {
       "bannerList": [
-        "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
-        "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
-        "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
-        "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
+        "/mock/demoImg/bannerTest1.png",
+        "/mock/demoImg/bannerTest2.png",
+        "/mock/demoImg/bannerTest3.png",
+        "/mock/demoImg/bannerTest4.png"
       ],
       "flexTestData": {
-        "E" : "http://juggle.isjs.cn/mock/demoImg/flextest1.png",
-        "A" : "http://juggle.isjs.cn/mock/demoImg/flextest2.png",
-        "B" : "http://juggle.isjs.cn/mock/demoImg/flextest3.png",
-        "C" : "http://juggle.isjs.cn/mock/demoImg/flextest4.png",
-        "D" : "http://juggle.isjs.cn/mock/demoImg/flextest5.png",
-        "F" : "http://juggle.isjs.cn/mock/demoImg/flextest6.png",
-        "G" : "http://juggle.isjs.cn/mock/demoImg/flextest7.png",
-        "H" : "http://juggle.isjs.cn/mock/demoImg/flexTest8.png",
-        "I" : "http://juggle.isjs.cn/mock/demoImg/flexTest9.png",
-        "J" : "http://juggle.isjs.cn/mock/demoImg/flexTest10.png",
-        "K" : "http://juggle.isjs.cn/mock/demoImg/flexTest11.png",
-        "L" : "http://juggle.isjs.cn/mock/demoImg/flexTest12.png",
-        "M" : "http://juggle.isjs.cn/mock/demoImg/flexTest13.png",
-        "N" : "http://juggle.isjs.cn/mock/demoImg/flexTest14.png",
-        "O" : "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
-        "P" : "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
-        "Q" : "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
-        "R" : "http://juggle.isjs.cn/mock/demoImg/flexTest18.png",
-        "S" : "http://juggle.isjs.cn/mock/demoImg/flexTest19.png",
-        "T" : "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
-        "U" : "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
-        "V" : "http://juggle.isjs.cn/mock/demoImg/flexTest22.png"
+        "E" : "/mock/demoImg/flextest1.png",
+        "A" : "/mock/demoImg/flextest2.png",
+        "B" : "/mock/demoImg/flextest3.png",
+        "C" : "/mock/demoImg/flextest4.png",
+        "D" : "/mock/demoImg/flextest5.png",
+        "F" : "/mock/demoImg/flextest6.png",
+        "G" : "/mock/demoImg/flextest7.png",
+        "H" : "/mock/demoImg/flexTest8.png",
+        "I" : "/mock/demoImg/flexTest9.png",
+        "J" : "/mock/demoImg/flexTest10.png",
+        "K" : "/mock/demoImg/flexTest11.png",
+        "L" : "/mock/demoImg/flexTest12.png",
+        "M" : "/mock/demoImg/flexTest13.png",
+        "N" : "/mock/demoImg/flexTest14.png",
+        "O" : "/mock/demoImg/flexTest15.png",
+        "P" : "/mock/demoImg/flexTest16.png",
+        "Q" : "/mock/demoImg/flexTest17.png",
+        "R" : "/mock/demoImg/flexTest18.png",
+        "S" : "/mock/demoImg/flexTest19.png",
+        "T" : "/mock/demoImg/flexTest20.png",
+        "U" : "/mock/demoImg/flexTest21.png",
+        "V" : "/mock/demoImg/flexTest22.png"
       },
       "listTestData": [
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+          "thumb": "/mock/demoImg/flexTest22.png",
           "num": "4",
           "price": "100.00",
           "title": "这里是商品名称",
@@ -44,7 +44,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
+          "thumb": "/mock/demoImg/flexTest21.png",
           "num": "2",
           "price": "98.00",
           "title": "这里是商品名称",
@@ -52,7 +52,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+          "thumb": "/mock/demoImg/flexTest20.png",
           "num": "5",
           "price": "8.00",
           "title": "这里是商品名称",
@@ -60,7 +60,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
+          "thumb": "/mock/demoImg/flexTest17.png",
           "num": "50",
           "price": "88.00",
           "title": "这里是商品名称",
@@ -68,7 +68,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
+          "thumb": "/mock/demoImg/flexTest16.png",
           "num": "4",
           "price": "100.00",
           "title": "这里是商品名称",
@@ -76,7 +76,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
+          "thumb": "/mock/demoImg/flexTest15.png",
           "num": "2",
           "price": "98.00",
           "title": "这里是商品名称",
@@ -84,7 +84,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+          "thumb": "/mock/demoImg/flexTest20.png",
           "num": "5",
           "price": "8.00",
           "title": "这里是商品名称",
@@ -92,7 +92,7 @@
           "desc": "这里是产品说明，产品说明，产品说明，产品说明"
         },
         {
-          "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest18.png",
+          "thumb": "/mock/demoImg/flexTest18.png",
           "num": "50",
           "price": "88.00",
           "title": "这里是商品名称",

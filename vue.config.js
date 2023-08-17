@@ -41,6 +41,7 @@ module.exports = {
     ]
   },
   devServer: {
+    port: 8082,
     overlay: {    //显示编译错误和警告
       warnings: true,
       errors: true

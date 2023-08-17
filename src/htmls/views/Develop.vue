@@ -278,7 +278,7 @@
         formValidate: {
           pageTitle: 'Juggle',
           author: 'isjs.cn',
-          originUrl: 'http://juggle.isjs.cn/mock/0001.json',
+          originUrl: '/mock/0001.json',
           originMethod: 'get',
           dataKeyChain: 'content',
           createData: '2020-04-24'

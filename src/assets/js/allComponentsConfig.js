@@ -24,7 +24,7 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png"
+          A: "/mock/demoImg/flexTest8.png"
         }
       }
     },
@@ -54,7 +54,7 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png"
+          A: "/mock/demoImg/flexTest8.png"
         }
       }
     }
@@ -91,10 +91,10 @@ const ComponentsObj = {
       ],
       baseData:{
         bannerList: [
-          "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
-          "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
-          "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
-          "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
+          "/mock/demoImg/bannerTest1.png",
+          "/mock/demoImg/bannerTest2.png",
+          "/mock/demoImg/bannerTest3.png",
+          "/mock/demoImg/bannerTest4.png"
         ]
       }
     },
@@ -122,7 +122,7 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png"
+          A: "/mock/demoImg/flexTest8.png"
         }
       }
     },
@@ -148,7 +148,7 @@ const ComponentsObj = {
         price: '200',
         desc: '描述信息描述信息',
         title: '商品名称',
-        thumb: 'http://juggle.isjs.cn/mock/demoImg/flexTest22.png',
+        thumb: '/mock/demoImg/flexTest22.png',
         tags: ['折扣','首发'],
       }
     }
@@ -229,11 +229,11 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/flextest2.png",
-          B: "http://juggle.isjs.cn/mock/demoImg/flextest3.png",
-          C: "http://juggle.isjs.cn/mock/demoImg/flextest4.png",
-          D: "http://juggle.isjs.cn/mock/demoImg/flextest5.png",
-          E: "http://juggle.isjs.cn/mock/demoImg/flextest1.png"
+          A: "/mock/demoImg/flextest2.png",
+          B: "/mock/demoImg/flextest3.png",
+          C: "/mock/demoImg/flextest4.png",
+          D: "/mock/demoImg/flextest5.png",
+          E: "/mock/demoImg/flextest1.png"
         }
       }
     },
@@ -344,16 +344,16 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/flextest2.png",
-          B: "http://juggle.isjs.cn/mock/demoImg/flextest3.png",
-          C: "http://juggle.isjs.cn/mock/demoImg/flextest4.png",
-          D: "http://juggle.isjs.cn/mock/demoImg/flextest5.png",
-          E: "http://juggle.isjs.cn/mock/demoImg/flextest1.png",
-          F: "http://juggle.isjs.cn/mock/demoImg/flextest6.png",
-          G: "http://juggle.isjs.cn/mock/demoImg/flextest7.png",
-          H: "http://juggle.isjs.cn/mock/demoImg/flexTest8.png",
-          I: "http://juggle.isjs.cn/mock/demoImg/flexTest9.png",
-          J: "http://juggle.isjs.cn/mock/demoImg/flexTest10.png"
+          A: "/mock/demoImg/flextest2.png",
+          B: "/mock/demoImg/flextest3.png",
+          C: "/mock/demoImg/flextest4.png",
+          D: "/mock/demoImg/flextest5.png",
+          E: "/mock/demoImg/flextest1.png",
+          F: "/mock/demoImg/flextest6.png",
+          G: "/mock/demoImg/flextest7.png",
+          H: "/mock/demoImg/flexTest8.png",
+          I: "/mock/demoImg/flexTest9.png",
+          J: "/mock/demoImg/flexTest10.png"
         }
       }
     },
@@ -415,8 +415,8 @@ const ComponentsObj = {
       ],
       baseData:{
         flexTestData: {
-          A: "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
-          B: "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
+          A: "/mock/demoImg/bannerTest1.png",
+          B: "/mock/demoImg/bannerTest2.png",
         }
       }
     },
@@ -450,7 +450,7 @@ const ComponentsObj = {
       baseData:{
         listTestData: [
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+            "thumb": "/mock/demoImg/flexTest22.png",
             "num": "4",
             "price": "100.00",
             "title": "这里是商品名称",
@@ -458,7 +458,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
+            "thumb": "/mock/demoImg/flexTest21.png",
             "num": "2",
             "price": "98.00",
             "title": "这里是商品名称",
@@ -466,7 +466,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+            "thumb": "/mock/demoImg/flexTest20.png",
             "num": "5",
             "price": "8.00",
             "title": "这里是商品名称",
@@ -474,7 +474,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
+            "thumb": "/mock/demoImg/flexTest17.png",
             "num": "50",
             "price": "88.00",
             "title": "这里是商品名称",
@@ -482,7 +482,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
+            "thumb": "/mock/demoImg/flexTest16.png",
             "num": "4",
             "price": "100.00",
             "title": "这里是商品名称",
@@ -490,7 +490,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
+            "thumb": "/mock/demoImg/flexTest15.png",
             "num": "2",
             "price": "98.00",
             "title": "这里是商品名称",
@@ -533,7 +533,7 @@ const ComponentsObj = {
               "publishStatus":"3"
             },
             "origin": {
-              "originUrl": "http://juggle.isjs.cn/mock/0002.json",
+              "originUrl": "/mock/0002.json",
               "originMethod": "get",
               "dataKeyChain": "listTestData"
             }
@@ -548,7 +548,7 @@ const ComponentsObj = {
       baseData:{
         listTestData: [
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest22.png",
+            "thumb": "/mock/demoImg/flexTest22.png",
             "num": "4",
             "price": "100.00",
             "title": "这里是商品名称",
@@ -556,7 +556,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest21.png",
+            "thumb": "/mock/demoImg/flexTest21.png",
             "num": "2",
             "price": "98.00",
             "title": "这里是商品名称",
@@ -564,7 +564,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest20.png",
+            "thumb": "/mock/demoImg/flexTest20.png",
             "num": "5",
             "price": "8.00",
             "title": "这里是商品名称",
@@ -572,7 +572,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest17.png",
+            "thumb": "/mock/demoImg/flexTest17.png",
             "num": "50",
             "price": "88.00",
             "title": "这里是商品名称",
@@ -580,7 +580,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest16.png",
+            "thumb": "/mock/demoImg/flexTest16.png",
             "num": "4",
             "price": "100.00",
             "title": "这里是商品名称",
@@ -588,7 +588,7 @@ const ComponentsObj = {
             "desc": "这里是产品说明，产品说明，产品说明，产品说明"
           },
           {
-            "thumb": "http://juggle.isjs.cn/mock/demoImg/flexTest15.png",
+            "thumb": "/mock/demoImg/flexTest15.png",
             "num": "2",
             "price": "98.00",
             "title": "这里是商品名称",

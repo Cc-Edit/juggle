@@ -40,6 +40,9 @@ var __pageConfig__ = {
                 "type": "flex",
                 "justify": "space-around"
               },
+              "styleOptions": {
+                'flex-wrap': 'nowrap'
+              },
               "colProp": {},
               "childItem": [
                 {
@@ -89,6 +92,9 @@ var __pageConfig__ = {
               "rowProp":{
                 "type": "flex",
                 "justify": "space-around"
+              },
+              "styleOptions": {
+                'flex-wrap': 'nowrap'
               },
               "colProp": {},
               "childItem": [

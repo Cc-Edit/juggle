@@ -10,7 +10,7 @@ var __pageConfig__ = {
         "publishStatus":"3"
       },
       "origin": {
-        "originUrl": "http://juggle.isjs.cn/mock/0001.json",
+        "originUrl": "/mock/0001.json",
         "originMethod": "get",
         "dataKeyChain": "content"
       }
@@ -47,7 +47,9 @@ var __pageConfig__ = {
                   "prop": {
                     "text": "天猫",
                     "dataKeyChain": "flexTestData,A",
-                    "styleOptions": {}
+                    "styleOptions": {
+                      width: '20%'
+                    }
                   }
                 },
                 {
@@ -517,7 +519,7 @@ var __pageConfig__ = {
                         "publishStatus":"3"
                       },
                       "origin": {
-                        "originUrl": "http://juggle.isjs.cn/mock/0002.json",
+                        "originUrl": "/mock/0002.json",
                         "originMethod": "get",
                         "dataKeyChain": "listTestData"
                       }

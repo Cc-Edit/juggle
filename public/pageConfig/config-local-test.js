@@ -10,7 +10,7 @@ var __pageConfig__ = {
         "publishStatus": "3"
       },
       "origin": {
-        "originUrl": "http://juggle.isjs.cn/mock/0001.json",
+        "originUrl": "/mock/0001.json",
         "originMethod": "get",
         "dataKeyChain": "content"
       }
@@ -47,10 +47,10 @@ var __pageConfig__ = {
         ],
         "baseData": {
           "bannerList": [
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
+            "/mock/demoImg/bannerTest1.png",
+            "/mock/demoImg/bannerTest2.png",
+            "/mock/demoImg/bannerTest3.png",
+            "/mock/demoImg/bannerTest4.png"
           ]
         }
       },
@@ -85,10 +85,10 @@ var __pageConfig__ = {
         ],
         "baseData": {
           "bannerList": [
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest1.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest2.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest3.png",
-            "http://juggle.isjs.cn/mock/demoImg/bannerTest4.png"
+            "/mock/demoImg/bannerTest1.png",
+            "/mock/demoImg/bannerTest2.png",
+            "/mock/demoImg/bannerTest3.png",
+            "/mock/demoImg/bannerTest4.png"
           ]
         }
       }
